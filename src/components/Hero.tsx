@@ -11,28 +11,27 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <section className="pt-24 pb-16 bg-gradient-to-br from-green-50 to-yellow-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
-            롤라의
-            <span className="text-purple-600 block mt-2">리추얼클럽</span>
+            <span className="text-primary block">Ritual Club</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in max-w-2xl mx-auto">
             3주간의 체계적인 습관 형성 챌린지로 더 나은 나를 만들어가세요
           </p>
           
           {/* 모집 기간 강조 */}
-          <div className="bg-purple-100 border border-purple-300 rounded-lg p-4 mb-8 max-w-md mx-auto">
-            <p className="text-purple-800 font-semibold text-lg">7월 챌린지 모집 중!</p>
-            <p className="text-purple-700">~ 7/8(화) 자정까지 (선착순)</p>
+          <div className="bg-accent/20 border border-accent/30 rounded-lg p-4 mb-8 max-w-md mx-auto">
+            <p className="text-accent-foreground font-semibold text-lg">7월 챌린지 모집 중!</p>
+            <p className="text-accent-foreground/80">~ 7/8(화) 자정까지 (선착순)</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button 
               size="lg" 
               onClick={scrollToApplication}
-              className="text-lg px-8 py-6 bg-purple-600 hover:bg-purple-700 text-white"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               지금 신청하기
             </Button>
@@ -40,7 +39,7 @@ const Hero = () => {
               variant="outline" 
               size="lg"
               onClick={openKakaoChat}
-              className="text-lg px-8 py-6 border-purple-600 text-purple-600 hover:bg-purple-50"
+              className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10"
             >
               문의하기 (카카오톡)
             </Button>

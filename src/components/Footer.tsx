@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h4 className="text-2xl font-bold text-primary mb-4">리추얼클럽</h4>
+            <h4 className="text-2xl font-bold text-primary mb-4">Ritual Club</h4>
             <p className="text-muted-foreground mb-4">
               더 나은 나를 위한 변화의 여정, 함께 시작해보세요.
             </p>
             <p className="text-sm text-muted-foreground">
-              © 2024 리추얼클럽. All rights reserved.
+              © 2025 Ritual Club. All rights reserved.
             </p>
           </div>
 
@@ -21,15 +21,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>ritual.club@email.com</span>
+                <span>lolajjoo2022@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>010-0000-0000</span>
-              </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span>서울시 강남구</span>
+                <span>010-6597-1543</span>
               </div>
             </div>
           </div>
@@ -44,16 +40,16 @@ const Footer = () => {
                 클럽 소개
               </button>
               <button 
+                onClick={() => document.getElementById('community')?.scrollIntoView({ behavior: 'smooth' })}
+                className="block text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                커뮤니티
+              </button>
+              <button 
                 onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
                 className="block text-muted-foreground hover:text-primary transition-colors text-left"
               >
                 신청하기
-              </button>
-              <button 
-                onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                일정
               </button>
               <button 
                 onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}

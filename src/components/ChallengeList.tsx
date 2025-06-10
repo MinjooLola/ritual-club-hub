@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, Calendar, Video } from "lucide-react";
+import { Clock, Users, Calendar, Video, Moon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const ChallengeList = () => {
@@ -16,6 +16,15 @@ const ChallengeList = () => {
       type: "온라인 Live 진행",
       color: "bg-orange-50 border-orange-200",
       icon: <Clock className="w-6 h-6 text-orange-600" />
+    },
+    {
+      id: "night",
+      title: "나이트리추얼챌린지",
+      description: "자기 전 온라인으로 함께 책 읽기",
+      time: "매일 밤 10:30~11:00",
+      type: "온라인 Live 진행",
+      color: "bg-indigo-50 border-indigo-200",
+      icon: <Moon className="w-6 h-6 text-indigo-600" />
     },
     {
       id: "english",
@@ -63,7 +72,7 @@ const ChallengeList = () => {
             챌린지 종류
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            5가지 다양한 챌린지 중 원하는 것을 선택해서 참여할 수 있습니다
+            6가지 다양한 챌린지 중 원하는 것을 선택해서 참여할 수 있습니다
           </p>
         </div>
 

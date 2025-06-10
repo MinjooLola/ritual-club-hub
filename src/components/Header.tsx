@@ -15,31 +15,31 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-primary">리추얼클럽</h1>
+          <h1 className="text-2xl font-bold text-purple-600">롤라의 리추얼클럽</h1>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-purple-600 transition-colors"
             >
               클럽 소개
             </button>
             <button 
+              onClick={() => scrollToSection('challenges')}
+              className="text-muted-foreground hover:text-purple-600 transition-colors"
+            >
+              챌린지
+            </button>
+            <button 
               onClick={() => scrollToSection('application')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-purple-600 transition-colors"
             >
               신청하기
             </button>
             <button 
-              onClick={() => scrollToSection('schedule')}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              일정
-            </button>
-            <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-purple-600 transition-colors"
             >
               후기
             </button>
@@ -60,25 +60,25 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors"
+                className="text-left text-muted-foreground hover:text-purple-600 transition-colors"
               >
                 클럽 소개
               </button>
               <button 
+                onClick={() => scrollToSection('challenges')}
+                className="text-left text-muted-foreground hover:text-purple-600 transition-colors"
+              >
+                챌린지
+              </button>
+              <button 
                 onClick={() => scrollToSection('application')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors"
+                className="text-left text-muted-foreground hover:text-purple-600 transition-colors"
               >
                 신청하기
               </button>
               <button 
-                onClick={() => scrollToSection('schedule')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors"
-              >
-                일정
-              </button>
-              <button 
                 onClick={() => scrollToSection('testimonials')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors"
+                className="text-left text-muted-foreground hover:text-purple-600 transition-colors"
               >
                 후기
               </button>

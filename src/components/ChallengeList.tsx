@@ -21,7 +21,7 @@ const ChallengeList = () => {
       id: "night",
       title: "나이트리추얼챌린지",
       description: "자기 전 온라인으로 함께 책 읽기",
-      time: "매일 밤 10:30~11:00",
+      time: "평일(월~금) 밤 10:30~11:00",
       type: "온라인 Live 진행",
       color: "bg-indigo-50 border-indigo-200",
       icon: <Moon className="w-6 h-6 text-indigo-600" />
@@ -39,7 +39,7 @@ const ChallengeList = () => {
       id: "exercise",
       title: "운동리추얼챌린지",
       description: "꾸준한 운동 습관으로 건강한 몸 만들기",
-      time: "매일(월~금) 최소 30분",
+      time: "평일(월~금) 최소 30분",
       type: "운동 인증 챌린지",
       color: "bg-green-50 border-green-200",
       icon: <Users className="w-6 h-6 text-green-600" />
@@ -48,7 +48,7 @@ const ChallengeList = () => {
       id: "writing",
       title: "기록리추얼챌린지",
       description: "글쓰기를 통한 생각 정리와 성찰",
-      time: "매일(월~금) 주 3회 이상",
+      time: "평일(월~금) 주 3회 이상",
       type: "글쓰기 인증 챌린지",
       color: "bg-purple-50 border-purple-200",
       icon: <Calendar className="w-6 h-6 text-purple-600" />
@@ -57,7 +57,7 @@ const ChallengeList = () => {
       id: "declutter",
       title: "정리리추얼챌린지",
       description: "불필요한 것들을 정리하며 미니멀 라이프",
-      time: "매일(월~금) 1개 이상 버리기",
+      time: "평일(월~금) 1개 이상 버리기",
       type: "정리 인증 챌린지",
       color: "bg-pink-50 border-pink-200",
       icon: <Users className="w-6 h-6 text-pink-600" />

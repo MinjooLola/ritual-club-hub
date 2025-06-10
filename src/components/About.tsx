@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Users, Calendar, TrendingUp } from "lucide-react";
+import { Target, Users, Calendar, TrendingUp, Heart, Trophy } from "lucide-react";
 
 const About = () => {
   const features = [
@@ -20,9 +20,9 @@ const About = () => {
       description: "모닝/영어/독서 챌린지는 매일 온라인 Live로 실시간 소통합니다"
     },
     {
-      icon: TrendingUp,
-      title: "검증된 성과",
-      description: "80% 이상의 재참여율로 입증된 효과적인 프로그램입니다"
+      icon: Heart,
+      title: "의미있는 참여",
+      description: "참가비와 보증금은 사회공헌활동에 기부되어 더 큰 의미를 만듭니다"
     }
   ];
 
@@ -34,7 +34,7 @@ const About = () => {
             Ritual Club이란?
           </h3>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            3주간의 체계적인 챌린지를 통해 건강한 습관을 형성하고, 
+            2022년부터 시작된 체계적인 3주 챌린지를 통해 건강한 습관을 형성하고, 
             함께하는 동반자들과 성장하는 커뮤니티입니다.
           </p>
         </div>
@@ -55,6 +55,34 @@ const About = () => {
           ))}
         </div>
 
+        {/* 참가비 & 보증금 기부 섹션 */}
+        <div className="bg-gradient-to-r from-green-50 to-yellow-50 rounded-2xl p-8 md:p-12 border border-primary/20 shadow-lg mb-16">
+          <div className="text-center mb-8">
+            <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h4 className="text-3xl font-bold text-foreground mb-4">
+              의미있는 참여
+            </h4>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              리추얼클럽의 참가비와 보증금은 모두 사회공헌활동에 기부됩니다. 
+              여러분의 습관 형성이 사회에 긍정적인 변화도 만들어냅니다.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary mb-2">참가비</div>
+              <p className="text-muted-foreground">챌린지 운영비로 사용</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary mb-2">보증금</div>
+              <p className="text-muted-foreground">완주 시 100% 환급</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary mb-2">기부금</div>
+              <p className="text-muted-foreground">사회공헌활동 지원</p>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-lg">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -65,19 +93,25 @@ const About = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">누적 참가자:</strong> 약 400명의 멤버들이 함께했습니다
+                    <strong className="text-foreground">2022년 시작:</strong> 3년간 체계적으로 운영된 프로그램
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">재참여율:</strong> 80% 이상의 높은 만족도를 자랑합니다
+                    <strong className="text-foreground">누적 참가자:</strong> 400명 이상의 멤버들이 함께했습니다
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">지속가능한 변화:</strong> 3주 후에도 계속되는 습관 형성을 돕습니다
+                    <strong className="text-foreground">리추얼 마스터:</strong> 10회 이상 참여한 베테랑 멤버 9명
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">
+                    <strong className="text-foreground">최고 기록:</strong> 최대 46회 참여한 멤버까지!
                   </p>
                 </div>
               </div>
@@ -100,6 +134,48 @@ const About = () => {
                 <p className="text-muted-foreground">다양한 챌린지</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* 멤버 레벨 시스템 */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h4 className="text-3xl font-bold text-foreground mb-4">
+              멤버 레벨 시스템
+            </h4>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              참여 횟수에 따라 레벨이 올라가며, 각 레벨별로 특별한 혜택을 제공합니다
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Card className="text-center hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="text-4xl mb-4">🌱</div>
+                <h5 className="text-xl font-semibold text-foreground mb-2">새싹</h5>
+                <p className="text-muted-foreground mb-4">1회 참여</p>
+                <div className="text-2xl font-bold text-primary">45명</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="text-4xl mb-4">🔥</div>
+                <h5 className="text-xl font-semibold text-foreground mb-2">습관러</h5>
+                <p className="text-muted-foreground mb-4">2-9회 참여</p>
+                <div className="text-2xl font-bold text-primary">19명</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="text-4xl mb-4">🏆</div>
+                <h5 className="text-xl font-semibold text-foreground mb-2">리추얼 마스터</h5>
+                <p className="text-muted-foreground mb-4">10회 이상 참여</p>
+                <div className="text-2xl font-bold text-primary">9명</div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

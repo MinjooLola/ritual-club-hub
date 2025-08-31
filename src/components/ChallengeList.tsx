@@ -29,8 +29,8 @@ const ChallengeList = () => {
     {
       id: "english",
       title: "영어리추얼챌린지",
-      description: "매일 영어로 소통하며 실력 향상",
-      time: "평일(월~금) 오전 7:00~7:30",
+      description: "각자 원하는 영어공부 방식으로 실력 향상",
+      time: "각자 원하는 시간",
       type: "영어공부 인증 챌린지",
       color: "bg-blue-50 border-blue-200",
       icon: <Video className="w-6 h-6 text-blue-600" />
@@ -117,7 +117,7 @@ const ChallengeList = () => {
               <h5 className="text-xl font-semibold text-purple-600 mb-4">9월 리추얼 챌린지</h5>
               <p className="text-muted-foreground">9/8(월) ~ 9/26(금)</p>
               <p className="text-sm text-muted-foreground mt-2">(3주 프로그램)</p>
-              <p className="text-sm text-muted-foreground">(*OT 9/7(일) 저녁 중 진행)</p>
+              <p className="text-sm text-muted-foreground">(*OT는 9/7(일) 저녁 중 시간 조율하여 진행)</p>
             </div>
           </div>
         </div>

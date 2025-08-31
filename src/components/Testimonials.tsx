@@ -5,28 +5,23 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      title: "모닝리추얼 챌린지 후기 - 올리",
-      description: "새벽 6시 기상과 함께하는 변화의 경험",
+      title: "모닝리추얼 챌린지 후기",
       link: "https://blog.naver.com/minjow1996/223495565888"
     },
     {
-      title: "모닝리추얼 챌린지 후기 - 올리 2편",
-      description: "지속된 변화와 성장의 이야기",
+      title: "영어리추얼챌린지 후기",
       link: "https://blog.naver.com/minjow1996/223830499174"
     },
     {
-      title: "나이트리추얼 독서 챌린지 후기 - 디노",
-      description: "독서습관 형성과 수면의 질 개선",
+      title: "나이트리추얼챌린지 참여후기",
       link: "https://blog.naver.com/luckyto_u/223369771120"
     },
     {
-      title: "리추얼클럽 참여 후기 - 쨈",
-      description: "꾸준한 습관과 동반자들과의 성장",
+      title: "나이트리추얼챌린지 참여후기",
       link: "https://m.blog.naver.com/ljrim3398/223372089399"
     },
     {
-      title: "8월 리추얼 챌린지 후기 - 감짱",
-      description: "체계적인 프로그램으로 만든 새로운 습관",
+      title: "운동리추얼챌린지 & 기록리추얼챌린지 후기",
       link: "https://blog.naver.com/gamzzang-/223988087412"
     }
   ];
@@ -55,9 +50,6 @@ const Testimonials = () => {
                   <Star className="w-6 h-6 fill-primary text-primary" />
                   <h4 className="font-semibold text-foreground">{testimonial.title}</h4>
                 </div>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {testimonial.description}
-                </p>
                 <div className="text-sm text-primary font-medium">
                   후기 전문 보기 →
                 </div>

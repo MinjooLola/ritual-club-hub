@@ -30,7 +30,7 @@ const ChallengeList = () => {
       id: "english",
       title: "영어리추얼챌린지",
       description: "각자 원하는 영어공부 방식으로 실력 향상",
-      time: "각자 원하는 시간",
+      time: "평일(월~금) 최소 30분",
       type: "영어공부 인증 챌린지",
       color: "bg-blue-50 border-blue-200",
       icon: <Video className="w-6 h-6 text-blue-600" />
@@ -38,8 +38,8 @@ const ChallengeList = () => {
     {
       id: "exercise",
       title: "운동리추얼챌린지",
-      description: "꾸준한 운동 습관으로 건강한 몸 만들기",
-      time: "주말포함 주 4회 최소 30분",
+      description: "주말포함 주3회 최소 30분 이상 운동+주2회 식단 데이",
+      time: "주말포함 주3회 최소 30분 이상 운동+ 주 2회 건강한 식단 인증",
       type: "운동 인증 챌린지",
       color: "bg-green-50 border-green-200",
       icon: <Users className="w-6 h-6 text-green-600" />
@@ -47,8 +47,8 @@ const ChallengeList = () => {
     {
       id: "writing",
       title: "기록리추얼챌린지",
-      description: "글쓰기를 통한 생각 정리와 성찰",
-      time: "주말포함 주 3회 이상",
+      description: "주말포함 주3회이상 글쓰기+ 주 2회 인풋 데이",
+      time: "주말포함 주3회이상 글쓰기+ 주 2회 다른 챌린저들의 글 읽고 인증",
       type: "글쓰기 인증 챌린지",
       color: "bg-purple-50 border-purple-200",
       icon: <Calendar className="w-6 h-6 text-purple-600" />

@@ -75,7 +75,7 @@ const ChallengeDetail = () => {
       subtitle: "꾸준한 운동 습관으로 건강한 몸 만들기",
       icon: <Users className="w-8 h-8 text-green-600" />,
       color: "from-green-50 to-emerald-50",
-      time: "평일(월~금) 최소 30분",
+      time: "주말포함 주3회 최소 30분 이상 운동+ 주 2회 건강한 식단 인증",
       type: "운동 인증 챌린지",
       description: "매일 최소 30분 이상 운동하고 인증샷을 공유합니다. 헬스, 러닝, 홈트레이닝 등 다양한 운동이 가능하며, 서로의 운동 모습을 보며 동기부여를 받습니다.",
       benefits: [
@@ -96,7 +96,7 @@ const ChallengeDetail = () => {
       subtitle: "글쓰기를 통한 생각 정리와 성찰",
       icon: <Calendar className="w-8 h-8 text-purple-600" />,
       color: "from-purple-50 to-pink-50",
-      time: "평일(월~금) 주 3회 이상",
+      time: "주말포함 주3회이상 글쓰기+ 주 2회 다른 챌린저들의 글 읽고 인증",
       type: "글쓰기 인증 챌린지",
       description: "주 3회 이상 글을 작성하여 하루를 정리하고 생각을 기록합니다. 일기, 에세이, 독후감 등 자유로운 형태로 작성할 수 있으며, 글쓰기를 통해 자신을 성찰하는 시간을 갖습니다.",
       benefits: [

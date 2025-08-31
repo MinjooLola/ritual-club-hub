@@ -17,12 +17,12 @@ const About = () => {
     {
       icon: Calendar,
       title: "Live 진행",
-      description: "모닝/영어/독서 챌린지는 매일 온라인 Live로 실시간 소통합니다"
+      description: "모닝/나이트 챌린지는 매일 온라인 Live로 실시간 소통합니다"
     },
     {
       icon: Heart,
       title: "의미있는 참여",
-      description: "참가비와 보증금은 사회공헌활동에 기부되어 더 큰 의미를 만듭니다"
+      description: "차감된 보증금은 사회공헌활동에 기부되어 더 큰 의미를 만듭니다"
     }
   ];
 

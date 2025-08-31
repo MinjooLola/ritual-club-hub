@@ -31,7 +31,7 @@ const ChallengeList = () => {
       title: "영어리추얼챌린지",
       description: "매일 영어로 소통하며 실력 향상",
       time: "평일(월~금) 오전 7:00~7:30",
-      type: "온라인 Live 진행",
+      type: "영어공부 인증 챌린지",
       color: "bg-blue-50 border-blue-200",
       icon: <Video className="w-6 h-6 text-blue-600" />
     },
@@ -39,7 +39,7 @@ const ChallengeList = () => {
       id: "exercise",
       title: "운동리추얼챌린지",
       description: "꾸준한 운동 습관으로 건강한 몸 만들기",
-      time: "평일(월~금) 최소 30분",
+      time: "주말포함 주 4회 최소 30분",
       type: "운동 인증 챌린지",
       color: "bg-green-50 border-green-200",
       icon: <Users className="w-6 h-6 text-green-600" />
@@ -48,7 +48,7 @@ const ChallengeList = () => {
       id: "writing",
       title: "기록리추얼챌린지",
       description: "글쓰기를 통한 생각 정리와 성찰",
-      time: "평일(월~금) 주 3회 이상",
+      time: "주말포함 주 3회 이상",
       type: "글쓰기 인증 챌린지",
       color: "bg-purple-50 border-purple-200",
       icon: <Calendar className="w-6 h-6 text-purple-600" />
@@ -113,17 +113,11 @@ const ChallengeList = () => {
         <div className="max-w-4xl mx-auto mt-16">
           <div className="bg-card rounded-xl p-8 border border-border shadow-lg">
             <h4 className="text-2xl font-bold text-center mb-8">챌린지 일정</h4>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <h5 className="text-xl font-semibold text-purple-600 mb-4">6월 리추얼 챌린지 (진행 중)</h5>
-                <p className="text-muted-foreground">6/2(월) OT ~ 6/20(금) 나의변화공유회</p>
-                <p className="text-sm text-muted-foreground mt-2">(3주 프로그램)</p>
-              </div>
-              <div className="text-center">
-                <h5 className="text-xl font-semibold text-purple-600 mb-4">7월 리추얼 챌린지</h5>
-                <p className="text-muted-foreground">7/15(화) OT ~ 8/5(화) 나의변화공유회</p>
-                <p className="text-sm text-muted-foreground mt-2">(3주 프로그램)</p>
-              </div>
+            <div className="text-center">
+              <h5 className="text-xl font-semibold text-purple-600 mb-4">9월 리추얼 챌린지</h5>
+              <p className="text-muted-foreground">9/8(월) ~ 9/26(금)</p>
+              <p className="text-sm text-muted-foreground mt-2">(3주 프로그램)</p>
+              <p className="text-sm text-muted-foreground">(*OT 9/7(일) 저녁 중 진행)</p>
             </div>
           </div>
         </div>

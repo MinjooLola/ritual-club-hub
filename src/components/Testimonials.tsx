@@ -5,40 +5,32 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "김민지",
-      age: "30대 직장인", 
-      content: "혼자서는 절대 할 수 없었던 새벽 6시 기상! 모닝리추얼을 통해 하루를 여유롭게 시작하는 법을 배웠어요. 이제는 6시에 일어나서 운동도 하고 독서도 하는 제가 믿기지 않아요.",
-      rating: 5
+      name: "올리 (임민지)",
+      age: "20대 직장인", 
+      content: "모닝리추얼 챌린지를 통해 새벽 6시 기상이 가능해졌어요. 혼자서는 절대 할 수 없었던 일이 리추얼클럽과 함께하니까 가능했습니다. 하루를 여유롭게 시작할 수 있게 되었어요.",
+      rating: 5,
+      link: "https://blog.naver.com/minjow1996/223495565888"
     },
     {
-      name: "임지림",
-      age: "20대 대학생",
-      content: "정말 많은 변화가 있었어요! 매일 아침 6시에 일어나는 것부터 시작해서 하루를 계획적으로 보내게 되었고, 성취감도 많이 느끼고 있어요. 함께 하는 사람들이 있어서 포기하지 않을 수 있었습니다.",
-      rating: 5
+      name: "디노 (요나)",
+      age: "20대",
+      content: "나이트리추얼 독서모임을 통해 독서습관이 생겼어요. 매일 밤 함께 책을 읽으며 많은 인사이트를 얻었고, 수면의 질도 좋아졌습니다. 정말 의미있는 시간이었어요.",
+      rating: 5,
+      link: "https://blog.naver.com/luckyto_u/223369771120"
     },
     {
-      name: "박서연", 
-      age: "20대 대학생",
-      content: "영어 말하기가 너무 두려웠는데, 매일 조금씩 영어로 대화하다 보니 자신감이 생겼어요. 원어민과 대화할 때도 이제는 떨지 않아요! 꾸준히 하는 것의 힘을 느꼈습니다.",
-      rating: 5
+      name: "쨈 (이재림)",
+      age: "20대",
+      content: "리추얼클럽을 통해 꾸준한 습관을 만들 수 있었어요. 함께하는 동반자들이 있어서 포기하지 않고 끝까지 할 수 있었습니다. 정말 많은 변화가 있었어요!",
+      rating: 5,
+      link: "https://m.blog.naver.com/ljrim3398/223372089399"
     },
     {
-      name: "이준호",
-      age: "30대 회사원", 
-      content: "나이트리추얼 덕분에 스마트폰 대신 책을 읽는 습관이 생겼어요. 잠들기 전 30분이 이렇게 소중한 시간인 줄 몰랐습니다. 수면의 질도 훨씬 좋아졌어요.",
-      rating: 5
-    },
-    {
-      name: "최유진",
-      age: "20대 직장인",
-      content: "3주 동안 매일 글을 쓰면서 하루를 정리하는 시간이 생겼어요. 생각이 정리되고 마음도 평온해졌습니다. 이제는 글쓰기가 스트레스 해소 방법이 되었어요. 회사에서도 업무 정리가 잘되요.",
-      rating: 5
-    },
-    {
-      name: "강동민", 
-      age: "30대 프리랜서",
-      content: "정리리추얼을 통해 집안이 완전히 달라졌어요. 물건이 줄어드니 청소도 쉬워지고 마음도 한결 가벼워졌습니다. 미니멀 라이프의 진정한 의미를 깨달았어요. 작업 환경도 깔끔해져서 집중이 잘돼요.",
-      rating: 5
+      name: "감짱",
+      age: "30대",
+      content: "8월 리추얼 챌린지 참여 결과 정말 만족스러웠어요. 체계적인 프로그램과 함께하는 동료들 덕분에 새로운 습관을 만들 수 있었습니다.",
+      rating: 5,
+      link: "https://blog.naver.com/gamzzang-/223988087412"
     }
   ];
 
@@ -75,14 +67,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-card rounded-xl p-8 max-w-md mx-auto border border-border">
-            <div className="text-4xl font-bold text-primary mb-2">98%</div>
-            <p className="text-muted-foreground mb-4">참가자 만족도</p>
-            <div className="text-2xl font-bold text-primary mb-2">4.9/5.0</div>
-            <p className="text-muted-foreground">평균 평점</p>
-          </div>
-        </div>
       </div>
     </section>
   );

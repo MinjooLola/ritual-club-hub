@@ -93,7 +93,7 @@ const About = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">2022년 시작:</strong> 3년간 체계적으로 운영된 프로그램
+                    <strong className="text-foreground">2022년 시작:</strong> 4년간 체계적으로 운영된 프로그램
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -137,47 +137,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* 멤버 레벨 시스템 */}
-        <div className="mt-16">
-          <div className="text-center mb-12">
-            <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h4 className="text-3xl font-bold text-foreground mb-4">
-              멤버 레벨 시스템
-            </h4>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              참여 횟수에 따라 레벨이 올라가며, 각 레벨별로 특별한 혜택을 제공합니다
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="text-center hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">🌱</div>
-                <h5 className="text-xl font-semibold text-foreground mb-2">새싹</h5>
-                <p className="text-muted-foreground mb-4">1회 참여</p>
-                <div className="text-2xl font-bold text-primary">45명</div>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">🔥</div>
-                <h5 className="text-xl font-semibold text-foreground mb-2">습관러</h5>
-                <p className="text-muted-foreground mb-4">2-9회 참여</p>
-                <div className="text-2xl font-bold text-primary">19명</div>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">🏆</div>
-                <h5 className="text-xl font-semibold text-foreground mb-2">리추얼 마스터</h5>
-                <p className="text-muted-foreground mb-4">10회 이상 참여</p>
-                <div className="text-2xl font-bold text-primary">9명</div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
       </div>
     </section>
   );

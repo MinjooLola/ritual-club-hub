@@ -21,14 +21,14 @@ const ApplicationForm = () => {
               리추얼클럽 참여하기
             </h3>
             <p className="text-xl text-muted-foreground">
-              7월 챌린지 모집이 진행 중입니다. 지금 바로 신청하세요!
+              9월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
             </p>
           </div>
 
           {/* 모집 마감 안내 */}
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8 text-center">
             <h4 className="text-xl font-bold text-red-700 mb-2">모집 마감 임박!</h4>
-            <p className="text-red-600">~ 7/8(화) 자정까지 (선착순 모집)</p>
+            <p className="text-red-600">~ 9/6(토) 오전까지 (선착순 모집)</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">

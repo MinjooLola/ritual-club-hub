@@ -55,33 +55,6 @@ const About = () => {
           ))}
         </div>
 
-        {/* 참가비 & 보증금 기부 섹션 */}
-        <div className="bg-gradient-to-r from-green-50 to-yellow-50 rounded-2xl p-8 md:p-12 border border-primary/20 shadow-lg mb-16">
-          <div className="text-center mb-8">
-            <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h4 className="text-3xl font-bold text-foreground mb-4">
-              의미있는 참여
-            </h4>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              리추얼클럽의 참가비와 보증금은 모두 사회공헌활동에 기부됩니다. 
-              여러분의 습관 형성이 사회에 긍정적인 변화도 만들어냅니다.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary mb-2">참가비</div>
-              <p className="text-muted-foreground">챌린지 운영비로 사용</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary mb-2">보증금</div>
-              <p className="text-muted-foreground">완주 시 100% 환급</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary mb-2">기부금</div>
-              <p className="text-muted-foreground">사회공헌활동 지원</p>
-            </div>
-          </div>
-        </div>
 
         <div className="bg-card rounded-2xl p-8 md:p-12 border border-border shadow-lg">
           <div className="grid md:grid-cols-2 gap-8 items-center">

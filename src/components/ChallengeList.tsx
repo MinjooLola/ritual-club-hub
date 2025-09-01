@@ -38,7 +38,7 @@ const ChallengeList = () => {
     {
       id: "exercise",
       title: "운동리추얼챌린지",
-      description: "주말포함 주3회 최소 30분 이상 운동+주2회 식단 데이",
+      description: "꾸준한 운동 습관으로 건강한 몸 만들기",
       time: "주말포함 주3회 최소 30분 이상 운동+ 주 2회 건강한 식단 인증",
       type: "운동 인증 챌린지",
       color: "bg-green-50 border-green-200",
@@ -47,7 +47,7 @@ const ChallengeList = () => {
     {
       id: "writing",
       title: "기록리추얼챌린지",
-      description: "주말포함 주3회이상 글쓰기+ 주 2회 인풋 데이",
+      description: "글쓰기를 통한 생각 정리와 성찰",
       time: "주말포함 주3회이상 글쓰기+ 주 2회 다른 챌린저들의 글 읽고 인증",
       type: "글쓰기 인증 챌린지",
       color: "bg-purple-50 border-purple-200",
@@ -114,7 +114,7 @@ const ChallengeList = () => {
           <div className="bg-card rounded-xl p-8 border border-border shadow-lg">
             <h4 className="text-2xl font-bold text-center mb-8">챌린지 일정</h4>
             <div className="text-center">
-              <h5 className="text-xl font-semibold text-purple-600 mb-4">9월 리추얼 챌린지</h5>
+              <h5 className="text-xl font-semibold text-purple-600 mb-4">38기 리추얼클럽 챌린저 모집중</h5>
               <p className="text-muted-foreground">9/8(월) ~ 9/26(금)</p>
               <p className="text-sm text-muted-foreground mt-2">(3주 프로그램)</p>
               <p className="text-sm text-muted-foreground">(*OT는 9/7(일) 저녁 중 시간 조율하여 진행)</p>

@@ -1,9 +1,13 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AuthDialog from "./auth/AuthDialog";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
+  const [authDialogTab, setAuthDialogTab] = useState<"login" | "signup">("login");
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -51,6 +55,27 @@ const Header = () => {
             </button>
           </nav>
 
+          {/* Auth Buttons - Desktop */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button
+              variant="ghost"
+              onClick={() => {
+                setAuthDialogTab("login");
+                setAuthDialogOpen(true);
+              }}
+            >
+              로그인
+            </Button>
+            <Button
+              onClick={() => {
+                setAuthDialogTab("signup");
+                setAuthDialogOpen(true);
+              }}
+            >
+              회원가입
+            </Button>
+          </div>
+
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden"
@@ -94,9 +119,41 @@ const Header = () => {
               >
                 후기
               </button>
+              
+              {/* Auth Buttons - Mobile */}
+              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
+                <Button
+                  variant="ghost"
+                  className="justify-start"
+                  onClick={() => {
+                    setAuthDialogTab("login");
+                    setAuthDialogOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <User className="mr-2 h-4 w-4" />
+                  로그인
+                </Button>
+                <Button
+                  className="justify-start"
+                  onClick={() => {
+                    setAuthDialogTab("signup");
+                    setAuthDialogOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  회원가입
+                </Button>
+              </div>
             </div>
           </nav>
         )}
+        
+        <AuthDialog 
+          isOpen={authDialogOpen}
+          onClose={() => setAuthDialogOpen(false)}
+          defaultTab={authDialogTab}
+        />
       </div>
     </header>
   );

@@ -1,13 +1,28 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+// Try different possible environment variable names used by Lovable
+const supabaseUrl = 
+  import.meta.env.VITE_SUPABASE_URL || 
+  import.meta.env.SUPABASE_URL ||
+  import.meta.env.VITE_SUPABASE_PROJECT_URL
+
+const supabaseAnonKey = 
+  import.meta.env.VITE_SUPABASE_ANON_KEY || 
+  import.meta.env.SUPABASE_ANON_KEY ||
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+
+// Temporary fallback for development - you'll need to replace these with your actual Supabase credentials
+const fallbackUrl = 'https://your-project.supabase.co'
+const fallbackKey = 'your-anon-key'
+
+const finalUrl = supabaseUrl || fallbackUrl
+const finalKey = supabaseAnonKey || fallbackKey
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables')
+  console.warn('Supabase environment variables not found. Using fallback values. Please configure your Supabase connection properly.')
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(finalUrl, finalKey)
 
 export type Database = {
   public: {

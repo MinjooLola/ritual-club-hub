@@ -1,13 +1,15 @@
 
 import { useState } from "react";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
 import AuthDialog from "./auth/AuthDialog";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [authDialogOpen, setAuthDialogOpen] = useState(false);
   const [authDialogTab, setAuthDialogTab] = useState<"login" | "signup">("login");
+  const { user, profile, signOut } = useAuth();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -57,23 +59,45 @@ const Header = () => {
 
           {/* Auth Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              onClick={() => {
-                setAuthDialogTab("login");
-                setAuthDialogOpen(true);
-              }}
-            >
-              로그인
-            </Button>
-            <Button
-              onClick={() => {
-                setAuthDialogTab("signup");
-                setAuthDialogOpen(true);
-              }}
-            >
-              회원가입
-            </Button>
+            {user ? (
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-muted-foreground">
+                  안녕하세요, {profile?.name || '사용자'}님
+                  {profile?.role === 'admin' && (
+                    <span className="ml-2 px-2 py-1 text-xs bg-red-100 text-red-700 rounded-full">
+                      관리자
+                    </span>
+                  )}
+                </span>
+                <Button
+                  variant="ghost"
+                  onClick={signOut}
+                >
+                  <LogOut className="mr-2 h-4 w-4" />
+                  로그아웃
+                </Button>
+              </div>
+            ) : (
+              <>
+                <Button
+                  variant="ghost"
+                  onClick={() => {
+                    setAuthDialogTab("login");
+                    setAuthDialogOpen(true);
+                  }}
+                >
+                  로그인
+                </Button>
+                <Button
+                  onClick={() => {
+                    setAuthDialogTab("signup");
+                    setAuthDialogOpen(true);
+                  }}
+                >
+                  회원가입
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -122,28 +146,54 @@ const Header = () => {
               
               {/* Auth Buttons - Mobile */}
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button
-                  variant="ghost"
-                  className="justify-start"
-                  onClick={() => {
-                    setAuthDialogTab("login");
-                    setAuthDialogOpen(true);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  <User className="mr-2 h-4 w-4" />
-                  로그인
-                </Button>
-                <Button
-                  className="justify-start"
-                  onClick={() => {
-                    setAuthDialogTab("signup");
-                    setAuthDialogOpen(true);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  회원가입
-                </Button>
+                {user ? (
+                  <div className="space-y-2">
+                    <div className="text-sm text-muted-foreground">
+                      안녕하세요, {profile?.name || '사용자'}님
+                      {profile?.role === 'admin' && (
+                        <span className="block mt-1 px-2 py-1 text-xs bg-red-100 text-red-700 rounded-full w-fit">
+                          관리자
+                        </span>
+                      )}
+                    </div>
+                    <Button
+                      variant="ghost"
+                      className="justify-start"
+                      onClick={() => {
+                        signOut();
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      <LogOut className="mr-2 h-4 w-4" />
+                      로그아웃
+                    </Button>
+                  </div>
+                ) : (
+                  <>
+                    <Button
+                      variant="ghost"
+                      className="justify-start"
+                      onClick={() => {
+                        setAuthDialogTab("login");
+                        setAuthDialogOpen(true);
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      <User className="mr-2 h-4 w-4" />
+                      로그인
+                    </Button>
+                    <Button
+                      className="justify-start"
+                      onClick={() => {
+                        setAuthDialogTab("signup");
+                        setAuthDialogOpen(true);
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      회원가입
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </nav>

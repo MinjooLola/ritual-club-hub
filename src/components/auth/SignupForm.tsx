@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 
 const signupSchema = z.object({
   email: z.string().email({ message: "올바른 이메일 주소를 입력해주세요" }),
@@ -38,6 +39,7 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { signUp } = useAuth();
 
   const {
     register,
@@ -52,11 +54,17 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
   const onSubmit = async (data: SignupFormData) => {
     setIsLoading(true);
     try {
-      // TODO: Implement Supabase authentication and profile creation
-      console.log("Signup data:", data);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const { confirmPassword, ...profileData } = data;
+      await signUp(data.email, data.password, {
+        name: profileData.name,
+        phone: profileData.phone,
+        current_work: profileData.currentWork,
+        interests: profileData.interests,
+        hobbies: profileData.hobbies,
+        concerns: profileData.concerns,
+        expectations: profileData.expectations || null,
+        how_did_you_know: profileData.howDidYouKnow,
+      });
       
       toast({
         title: "회원가입 성공",
@@ -64,10 +72,10 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
       });
       
       onSuccess();
-    } catch (error) {
+    } catch (error: any) {
       toast({
         title: "회원가입 실패",
-        description: "다시 시도해주세요.",
+        description: error.message || "다시 시도해주세요.",
         variant: "destructive",
       });
     } finally {

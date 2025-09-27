@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 
 const loginSchema = z.object({
   email: z.string().email({ message: "올바른 이메일 주소를 입력해주세요" }),
@@ -23,6 +24,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { signIn } = useAuth();
 
   const {
     register,
@@ -35,11 +37,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
   const onSubmit = async (data: LoginFormData) => {
     setIsLoading(true);
     try {
-      // TODO: Implement Supabase authentication
-      console.log("Login data:", data);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await signIn(data.email, data.password);
       
       toast({
         title: "로그인 성공",
@@ -47,10 +45,10 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
       });
       
       onSuccess();
-    } catch (error) {
+    } catch (error: any) {
       toast({
         title: "로그인 실패",
-        description: "이메일 또는 비밀번호를 확인해주세요.",
+        description: error.message || "이메일 또는 비밀번호를 확인해주세요.",
         variant: "destructive",
       });
     } finally {

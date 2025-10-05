@@ -7,6 +7,7 @@ import ApplicationForm from "@/components/ApplicationForm";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import SetupSampleUsers from "@/components/SetupSampleUsers";
+import CreateAdminButton from "@/components/CreateAdminButton";
 
 const Index = () => {
   return (
@@ -17,6 +18,12 @@ const Index = () => {
       <ChallengeList />
       <Testimonials />
       <ApplicationForm />
+      
+      {/* 임시: 관리자 계정 생성 버튼 */}
+      <div className="container mx-auto px-4 py-8 text-center">
+        <CreateAdminButton />
+      </div>
+      
       <Footer />
     </div>
   );

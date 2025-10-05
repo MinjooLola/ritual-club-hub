@@ -80,9 +80,37 @@ const ChallengeList = () => {
           <h3 className="text-4xl font-bold text-foreground mb-4">
             챌린지 종류
           </h3>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             7가지 다양한 챌린지 중 원하는 것을 선택해서 참여할 수 있습니다
           </p>
+          
+          {/* 시너지 효과 강조 */}
+          <div className="max-w-3xl mx-auto bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20 border border-purple-200 dark:border-purple-800 rounded-xl p-6 mt-6">
+            <p className="text-lg font-semibold text-foreground mb-3">💡 여러 챌린지를 함께 하면 더 큰 시너지가!</p>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-start space-x-2">
+                <span className="text-purple-600 text-xl">🔥</span>
+                <div className="text-left">
+                  <p className="font-semibold text-foreground">습관 형성 가속화</p>
+                  <p className="text-muted-foreground">여러 습관이 서로를 강화하며 더 빠르게 정착됩니다</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span className="text-blue-600 text-xl">⚡</span>
+                <div className="text-left">
+                  <p className="font-semibold text-foreground">통합적 성장</p>
+                  <p className="text-muted-foreground">아침·저녁·운동·독서 등이 만나 삶 전체가 변화합니다</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span className="text-green-600 text-xl">💰</span>
+                <div className="text-left">
+                  <p className="font-semibold text-foreground">합리적 가격</p>
+                  <p className="text-muted-foreground">2개 이상 신청 시 개당 비용이 저렴해집니다</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-6 max-w-6xl mx-auto">

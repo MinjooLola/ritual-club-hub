@@ -26,6 +26,18 @@ const ApplicationForm = () => {
             {/* 참가비 안내 */}
             <div className="bg-card border border-border rounded-lg p-6 max-w-3xl mx-auto mb-8">
               <h4 className="text-xl font-bold text-center mb-4 text-foreground">참가비 안내</h4>
+              
+              {/* 추천 메시지 */}
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-2 border-purple-300 dark:border-purple-700 rounded-lg p-4 mb-6">
+                <p className="text-center font-bold text-purple-700 dark:text-purple-300 mb-2">
+                  ⭐ 2개 이상 함께 시작하면 더 큰 변화를 경험하실 수 있어요!
+                </p>
+                <p className="text-center text-sm text-purple-600 dark:text-purple-400">
+                  아침과 밤 리추얼을 함께 하거나, 운동과 독서를 병행하면<br />
+                  습관들이 서로 시너지를 내며 삶 전체가 바뀌는 경험을 하게 됩니다
+                </p>
+              </div>
+              
               <div className="grid md:grid-cols-3 gap-4 mb-6">
                 <div className="text-center p-4 bg-muted/50 rounded-lg">
                   <p className="font-bold text-lg text-foreground mb-1">1개 챌린지</p>

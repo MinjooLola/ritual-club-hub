@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useState } from "react";
 import testimonialsHeader from "@/assets/testimonials-header.png";
 
 const Testimonials = () => {
@@ -327,7 +329,7 @@ const Testimonials = () => {
   };
 
   // Embla 캐러셀 설정
-  const [emblaRef] = useEmblaCarousel(
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: true,
       align: 'start',
@@ -335,6 +337,30 @@ const Testimonials = () => {
     },
     [Autoplay({ delay: 4000, stopOnInteraction: false })]
   );
+
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+  }, [emblaApi, onSelect]);
 
   // 후기 배열 재정렬 (같은 작성자 연속 방지)
   const testimonials = shuffleAvoidingConsecutive(allTestimonials);
@@ -371,29 +397,51 @@ const Testimonials = () => {
         </div>
 
         {/* 자동 슬라이딩 캐러셀 */}
-        <div className="overflow-hidden mb-12" ref={emblaRef}>
-          <div className="flex gap-6 transition-transform duration-700 ease-out">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0">
-                <Card className="border-border hover:shadow-lg transition-all duration-300 h-full">
-                  <CardContent className="p-6">
-                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-3">
-                      {testimonial.challenge}
-                    </span>
-                    <div className="flex items-start gap-2 mb-3">
-                      <Quote className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {testimonial.content}
+        <div className="relative max-w-7xl mx-auto mb-12">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6 transition-transform duration-700 ease-out">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0">
+                  <Card className="border-border hover:shadow-lg transition-all duration-300 h-full">
+                    <CardContent className="p-6">
+                      <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-3">
+                        {testimonial.challenge}
+                      </span>
+                      <div className="flex items-start gap-2 mb-3">
+                        <Quote className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {testimonial.content}
+                        </p>
+                      </div>
+                      <p className="text-foreground font-semibold text-sm">
+                        - {testimonial.author}
                       </p>
-                    </div>
-                    <p className="text-foreground font-semibold text-sm">
-                      - {testimonial.author}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
+          
+          {/* 화살표 버튼 */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background z-10 shadow-lg"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background z-10 shadow-lg"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
         </div>
 
         {/* 블로그 후기 링크 */}

@@ -64,8 +64,8 @@ const ApplicationForm = () => {
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 3만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
-                  <p className="text-xs text-amber-700 dark:text-amber-400 font-bold mt-2">(7개 시 개당 1.7만원!)</p>
-                  <p className="text-xs text-amber-600 dark:text-amber-500 mt-1">💡 3개 이상이면 무제한이 이득</p>
+                  <p className="text-xs text-amber-700 dark:text-amber-400 font-bold mt-2">(7개 참여 시 개당 1.7만원)</p>
+                  <p className="text-xs text-amber-600 dark:text-amber-500 mt-1">💡 3개 이상이면 무제한이 더 저렴해요!</p>
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground italic mb-2">

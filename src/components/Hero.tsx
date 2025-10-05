@@ -22,11 +22,25 @@ const Hero = () => {
           </p>
           
           {/* 모집 기간 강조 */}
-          <div className="bg-accent/20 border border-accent/30 rounded-lg p-4 mb-8 max-w-md mx-auto">
-            <p className="text-accent-foreground font-semibold text-lg mb-2">10월 챌린지(39기) 모집 중!</p>
-            <p className="text-accent-foreground/80 mb-1">진행 일정: 10/13(월)~10/31(금) [3주]</p>
-            <p className="text-accent-foreground/80 mb-1">신청 기간: 10/7(화)~10/9(목) [선착순]</p>
-            <p className="text-accent-foreground/80 text-sm mb-3">*기존 챌린저 할인 신청 마감: 10/6(월)</p>
+          <div className="bg-accent/20 border border-accent/30 rounded-lg p-6 mb-8 max-w-lg mx-auto">
+            <p className="text-accent-foreground font-bold text-xl mb-4">10월 챌린지(39기) 모집 중!</p>
+            
+            <div className="space-y-3 text-left">
+              <div className="bg-background/50 rounded-md p-3">
+                <p className="text-accent-foreground font-semibold mb-1">📅 진행 일정</p>
+                <p className="text-accent-foreground/90 text-lg">10/13(월) ~ 10/31(금) <span className="text-sm text-accent-foreground/70">[3주]</span></p>
+              </div>
+              
+              <div className="bg-background/50 rounded-md p-3">
+                <p className="text-accent-foreground font-semibold mb-1">✍️ 신청 기간</p>
+                <p className="text-accent-foreground/90 text-lg">10/7(화) ~ 10/9(목) <span className="text-sm font-semibold text-red-600">[선착순]</span></p>
+              </div>
+              
+              <div className="bg-primary/10 border border-primary/30 rounded-md p-3">
+                <p className="text-primary font-semibold text-sm">💡 기존 챌린저 할인 신청 마감</p>
+                <p className="text-primary/90 font-medium">10/6(월)까지</p>
+              </div>
+            </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">

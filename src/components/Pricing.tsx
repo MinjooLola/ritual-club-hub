@@ -73,21 +73,34 @@ const Pricing = () => {
           {/* 추가 할인 혜택 */}
           <Card className="bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800">
             <CardHeader>
-              <CardTitle className="text-center text-2xl">추가 할인 혜택</CardTitle>
+              <CardTitle className="text-center text-2xl">
+                추가 할인 혜택
+                <span className="block text-sm font-normal text-muted-foreground mt-2">
+                  (*중복 할인 불가)
+                </span>
+              </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3">
+            <CardContent className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground">친구 초대 이벤트</p>
-                  <p className="text-sm text-muted-foreground">신규 멤버와 기존 멤버 모두 2만원 추가 할인</p>
+                  <p className="font-semibold text-foreground">기존 챌린저 습관 지속 쿠폰</p>
+                  <p className="text-sm text-muted-foreground">직전달 리추얼클럽 멤버 2만원 할인</p>
+                  <p className="text-xs text-muted-foreground italic mt-1">*기존 챌린저 모집 기간에 신청해야 적용 가능</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-foreground">블로그 모집 링크 공유</p>
-                  <p className="text-sm text-muted-foreground">5천원 추가 할인</p>
+                  <p className="font-semibold text-foreground">친구 초대 쿠폰</p>
+                  <p className="text-sm text-muted-foreground">신규 멤버와 기존 멤버 모두 2만원 할인</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-semibold text-foreground">블로그 모집 링크 공유 쿠폰</p>
+                  <p className="text-sm text-muted-foreground">블로그에 모집 링크 포스팅 시 5천원 할인</p>
                 </div>
               </div>
             </CardContent>

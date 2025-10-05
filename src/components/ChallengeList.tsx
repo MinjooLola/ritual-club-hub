@@ -183,7 +183,7 @@ const ChallengeList = () => {
           </div>
           
           {/* 세 번째 줄: 기록, 정리 */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
             {challenges.slice(5).map((challenge) => (
               <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
                 <CardHeader>

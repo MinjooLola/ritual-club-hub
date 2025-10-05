@@ -335,7 +335,7 @@ const Testimonials = () => {
       align: 'start',
       duration: 30,
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+    [Autoplay({ delay: 2500, stopOnInteraction: false })]
   );
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -449,7 +449,7 @@ const Testimonials = () => {
           <h4 className="text-2xl font-bold text-center text-foreground mb-8">
             더 많은 후기 보기
           </h4>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {blogTestimonials.map((testimonial, index) => (
               <Card 
                 key={index} 

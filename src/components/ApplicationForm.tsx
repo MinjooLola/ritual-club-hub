@@ -30,7 +30,7 @@ const ApplicationForm = () => {
               {/* 추천 메시지 */}
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-2 border-purple-300 dark:border-purple-700 rounded-lg p-4 mb-6">
                 <p className="text-center font-bold text-purple-700 dark:text-purple-300 mb-2">
-                  ⭐ 2개 이상 함께 시작하면 더 큰 변화를 경험하실 수 있어요!
+                  ⭐ 여러 습관을 함께 만들고 싶다면, 지금이 기회입니다
                 </p>
                 <p className="text-center text-sm text-purple-600 dark:text-purple-400">
                   만들고 싶은 리추얼이 여러 개라면, 지금 바로 시작하세요!<br />

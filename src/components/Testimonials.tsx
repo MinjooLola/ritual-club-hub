@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import testimonialsHeader from "@/assets/testimonials-header.png";
 
 const Testimonials = () => {
@@ -141,6 +144,15 @@ const Testimonials = () => {
     }
   ];
 
+  // 챌린지별로 후기 그룹화
+  const testimonialsByChallenge = detailedTestimonials.reduce((acc, testimonial) => {
+    if (!acc[testimonial.challenge]) {
+      acc[testimonial.challenge] = [];
+    }
+    acc[testimonial.challenge].push(testimonial);
+    return acc;
+  }, {} as Record<string, typeof detailedTestimonials>);
+
   const blogTestimonials = [
     {
       title: "모닝리추얼 챌린지 후기",
@@ -188,31 +200,74 @@ const Testimonials = () => {
           />
         </div>
 
-        {/* 상세 참가자 후기 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-12">
-          {detailedTestimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="border-border hover:shadow-lg transition-all duration-300 hover:border-primary/30"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3 mb-3">
-                  <Quote className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-3">
-                      {testimonial.challenge}
-                    </span>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                      {testimonial.content}
-                    </p>
-                    <p className="text-foreground font-semibold text-sm">
-                      - {testimonial.author}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* 챌린지별 대표 후기 */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
+          {Object.entries(testimonialsByChallenge).map(([challenge, testimonials]) => {
+            const representative = testimonials[0];
+            const count = testimonials.length;
+            
+            return (
+              <Dialog key={challenge}>
+                <DialogTrigger asChild>
+                  <Card className="border-border hover:shadow-lg transition-all duration-300 hover:border-primary/50 cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
+                          {challenge}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {count}개 후기
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-2 mb-3">
+                        <Quote className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                        <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                          {representative.content}
+                        </p>
+                      </div>
+                      <p className="text-foreground font-semibold text-sm mb-3">
+                        - {representative.author}
+                      </p>
+                      <div className="flex items-center justify-end text-primary text-sm font-medium">
+                        더보기 <ChevronRight className="w-4 h-4 ml-1" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[80vh]">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl">
+                      {challenge} 후기 모음
+                      <span className="text-sm font-normal text-muted-foreground ml-2">
+                        ({count}개)
+                      </span>
+                    </DialogTitle>
+                  </DialogHeader>
+                  <ScrollArea className="h-[60vh] pr-4">
+                    <div className="space-y-6">
+                      {testimonials.map((testimonial, index) => (
+                        <Card key={index} className="border-border">
+                          <CardContent className="p-5">
+                            <div className="flex items-start gap-3">
+                              <Quote className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                              <div className="flex-1">
+                                <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                                  {testimonial.content}
+                                </p>
+                                <p className="text-foreground font-semibold text-sm">
+                                  - {testimonial.author}
+                                </p>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </ScrollArea>
+                </DialogContent>
+              </Dialog>
+            );
+          })}
         </div>
 
         {/* 블로그 후기 링크 */}

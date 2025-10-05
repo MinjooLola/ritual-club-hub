@@ -6,8 +6,6 @@ import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -17,12 +15,6 @@ const signupSchema = z.object({
   confirmPassword: z.string(),
   name: z.string().min(2, { message: "이름은 최소 2자 이상이어야 합니다" }),
   phone: z.string().min(10, { message: "올바른 전화번호를 입력해주세요" }),
-  currentWork: z.string().min(1, { message: "현재 하는 일을 입력해주세요" }),
-  interests: z.string().min(1, { message: "관심사를 입력해주세요" }),
-  hobbies: z.string().min(1, { message: "취미를 입력해주세요" }),
-  concerns: z.string().min(10, { message: "습관 형성에 대한 고민을 10자 이상 입력해주세요" }),
-  expectations: z.string().optional(),
-  howDidYouKnow: z.string().min(1, { message: "어떻게 알게 되셨는지 선택해주세요" }),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "비밀번호가 일치하지 않습니다",
   path: ["confirmPassword"],
@@ -44,8 +36,6 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: { errors },
   } = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
@@ -54,16 +44,9 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
   const onSubmit = async (data: SignupFormData) => {
     setIsLoading(true);
     try {
-      const { confirmPassword, ...profileData } = data;
       await signUp(data.email, data.password, {
-        name: profileData.name,
-        phone: profileData.phone,
-        current_work: profileData.currentWork,
-        interests: profileData.interests,
-        hobbies: profileData.hobbies,
-        concerns: profileData.concerns,
-        expectations: profileData.expectations || null,
-        how_did_you_know: profileData.howDidYouKnow,
+        name: data.name,
+        phone: data.phone,
       });
       
       toast({
@@ -85,10 +68,7 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      {/* Basic Info */}
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold">기본 정보</h3>
-        
         <div className="space-y-2">
           <Label htmlFor="name">이름 *</Label>
           <Input
@@ -179,95 +159,6 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
           </div>
           {errors.confirmPassword && (
             <p className="text-sm text-destructive">{errors.confirmPassword.message}</p>
-          )}
-        </div>
-      </div>
-
-      {/* Personal Info */}
-      <div className="space-y-4 pt-4 border-t">
-        <h3 className="text-lg font-semibold">개인 정보</h3>
-        
-        <div className="space-y-2">
-          <Label htmlFor="currentWork">현재 하는 일 *</Label>
-          <Input
-            id="currentWork"
-            placeholder="예: 대학생, 직장인, 프리랜서 등"
-            {...register("currentWork")}
-          />
-          {errors.currentWork && (
-            <p className="text-sm text-destructive">{errors.currentWork.message}</p>
-          )}
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="interests">관심사 *</Label>
-          <Input
-            id="interests"
-            placeholder="예: 자기계발, 운동, 독서, 요리 등"
-            {...register("interests")}
-          />
-          {errors.interests && (
-            <p className="text-sm text-destructive">{errors.interests.message}</p>
-          )}
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="hobbies">취미 *</Label>
-          <Input
-            id="hobbies"
-            placeholder="예: 영화감상, 등산, 게임, 그림 그리기 등"
-            {...register("hobbies")}
-          />
-          {errors.hobbies && (
-            <p className="text-sm text-destructive">{errors.hobbies.message}</p>
-          )}
-        </div>
-      </div>
-
-      {/* Ritual Club Related */}
-      <div className="space-y-4 pt-4 border-t">
-        <h3 className="text-lg font-semibold">Ritual Club 관련</h3>
-        
-        <div className="space-y-2">
-          <Label htmlFor="concerns">습관 형성에 대한 고민 *</Label>
-          <Textarea
-            id="concerns"
-            placeholder="평소 습관을 만드는데 어떤 어려움이나 고민을 가지고 계신가요? 구체적으로 적어주세요."
-            className="min-h-[100px]"
-            {...register("concerns")}
-          />
-          {errors.concerns && (
-            <p className="text-sm text-destructive">{errors.concerns.message}</p>
-          )}
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="expectations">클럽 참여 기대사항 (선택)</Label>
-          <Textarea
-            id="expectations"
-            placeholder="이 클럽에 참여하면서 어떤 것을 기대하시나요? (선택사항)"
-            className="min-h-[80px]"
-            {...register("expectations")}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label>Ritual Club을 어떻게 알게 되셨나요? *</Label>
-          <Select onValueChange={(value) => setValue("howDidYouKnow", value)}>
-            <SelectTrigger>
-              <SelectValue placeholder="선택해주세요" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="sns">SNS (인스타그램, 페이스북 등)</SelectItem>
-              <SelectItem value="friend">지인 소개</SelectItem>
-              <SelectItem value="search">인터넷 검색</SelectItem>
-              <SelectItem value="community">온라인 커뮤니티</SelectItem>
-              <SelectItem value="advertisement">광고</SelectItem>
-              <SelectItem value="other">기타</SelectItem>
-            </SelectContent>
-          </Select>
-          {errors.howDidYouKnow && (
-            <p className="text-sm text-destructive">{errors.howDidYouKnow.message}</p>
           )}
         </div>
       </div>

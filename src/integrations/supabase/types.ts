@@ -31,15 +31,15 @@ export type Database = {
           updated_at: string
         }
         Insert: {
-          concerns: string
+          concerns?: string
           created_at?: string
-          current_work: string
+          current_work?: string
           email: string
           expectations?: string | null
-          hobbies: string
-          how_did_you_know: string
+          hobbies?: string
+          how_did_you_know?: string
           id: string
-          interests: string
+          interests?: string
           name: string
           phone: string
           role?: string

@@ -22,7 +22,7 @@ type AuthContextType = {
   user: User | null
   profile: Profile | null
   loading: boolean
-  signUp: (email: string, password: string, profileData: Omit<Profile, 'id' | 'email' | 'role' | 'created_at' | 'updated_at'>) => Promise<void>
+  signUp: (email: string, password: string, profileData: { name: string; phone: string }) => Promise<void>
   signIn: (email: string, password: string) => Promise<void>
   signOut: () => Promise<void>
 }
@@ -90,7 +90,7 @@ export const useAuthProvider = () => {
   const signUp = async (
     email: string, 
     password: string, 
-    profileData: Omit<Profile, 'id' | 'email' | 'role' | 'created_at' | 'updated_at'>
+    profileData: { name: string; phone: string }
   ) => {
     const { data, error } = await supabase.auth.signUp({
       email,

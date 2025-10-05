@@ -33,7 +33,6 @@ const ApplicationForm = () => {
                   ⭐ 여러 습관을 함께 만들고 싶다면, 지금이 기회입니다
                 </p>
                 <p className="text-center text-sm text-purple-600 dark:text-purple-400">
-                  만들고 싶은 리추얼이 여러 개라면, 지금 바로 시작하세요!<br />
                   습관들이 서로 시너지를 내며 삶 전체가 바뀌는 경험을 하게 됩니다
                 </p>
               </div>

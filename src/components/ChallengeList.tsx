@@ -66,7 +66,7 @@ const ChallengeList = () => {
       id: "declutter",
       title: "정리리추얼챌린지",
       description: "내 공간을 정돈하고 불필요한 것들을 비우며 여유 찾기",
-      time: "주 5회 공간 정리 or 비움 인증",
+      time: "주 5회 공간 정리(책상, 부엌, 거실 등) or 비움 인증",
       type: "정리 인증 챌린지",
       color: "bg-pink-50 border-pink-200",
       icon: <Users className="w-6 h-6 text-pink-600" />

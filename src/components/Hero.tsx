@@ -26,8 +26,7 @@ const Hero = () => {
             <p className="text-accent-foreground font-semibold text-lg mb-2">10월 챌린지(39기) 모집 중!</p>
             <p className="text-accent-foreground/80 mb-1">신청 기간: 10/7(화)~10/9(목) [선착순]</p>
             <p className="text-accent-foreground/80 text-sm mb-3">*기존 챌린저 할인 신청 마감: 10/6(월)</p>
-            <p className="text-accent-foreground/80 mb-1">진행 일정: 10/13(월)~10/31(금)</p>
-            <p className="text-accent-foreground/80 text-sm">*OT: 10/13(월) 밤 10시, Final 공유회: 10/31(금) 밤 10시</p>
+            <p className="text-accent-foreground/80">진행 일정: 10/13(월)~10/31(금)</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">

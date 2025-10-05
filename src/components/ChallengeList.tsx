@@ -226,7 +226,7 @@ const ChallengeList = () => {
               <p className="text-muted-foreground mb-2">10/13(월) ~ 10/31(금) [3주 프로그램]</p>
               <p className="text-sm text-muted-foreground">* OT: 10/13(월) 밤 10시</p>
               <p className="text-sm text-muted-foreground">* Final 공유회: 10/31(금) 밤 10시</p>
-              <p className="text-sm text-muted-foreground">(실시간 Live)</p>
+              <p className="text-sm text-muted-foreground">(OT와 공유회는 실시간 Live로 진행됩니다)</p>
             </div>
           </div>
         </div>

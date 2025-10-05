@@ -33,7 +33,7 @@ const ApplicationForm = () => {
                   ⭐ 2개 이상 함께 시작하면 더 큰 변화를 경험하실 수 있어요!
                 </p>
                 <p className="text-center text-sm text-purple-600 dark:text-purple-400">
-                  아침과 밤 리추얼을 함께 하거나, 운동과 독서를 병행하면<br />
+                  만들고 싶은 리추얼이 여러 개라면, 지금 바로 시작하세요!<br />
                   습관들이 서로 시너지를 내며 삶 전체가 바뀌는 경험을 하게 됩니다
                 </p>
               </div>

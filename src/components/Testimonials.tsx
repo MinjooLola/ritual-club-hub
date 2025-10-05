@@ -5,14 +5,6 @@ import Autoplay from "embla-carousel-autoplay";
 import testimonialsHeader from "@/assets/testimonials-header.png";
 
 const Testimonials = () => {
-  const [emblaRef] = useEmblaCarousel(
-    { 
-      loop: true,
-      align: 'start',
-    },
-    [Autoplay({ delay: 3000, stopOnInteraction: false })]
-  );
-
   const allTestimonials = [
     // 기존 후기들
     {
@@ -51,7 +43,7 @@ const Testimonials = () => {
       author: "재은"
     },
     {
-      challenge: "나이트리추얼챌린지",
+      challenge: "영어리추얼챌린지",
       content: "이번 챌린지를 통해 나를 소진하는 것이 아닌 채우는 귀한 것을 하는 시간을 갖게 되어서 좋았습니다. 예전부터 지금도 저의 귀감이 되는 롤라님의 실행력, 끈기, 긍정의 끌어당김 등 롤라님의 매력을 가까이서 느낄 수 있어서 좋았어요!",
       author: "그레이스"
     },
@@ -323,6 +315,45 @@ const Testimonials = () => {
     }
   ];
 
+  // 같은 작성자가 연속으로 나오지 않도록 배열 재정렬하는 함수
+  const shuffleAvoidingConsecutive = (array: typeof allTestimonials) => {
+    const shuffled = [...array];
+    
+    // Fisher-Yates 알고리즘으로 섞기
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    // 연속된 같은 작성자가 있으면 위치 교환
+    for (let i = 0; i < shuffled.length - 1; i++) {
+      if (shuffled[i].author === shuffled[i + 1].author) {
+        // 다음 다른 작성자를 찾아서 교환
+        for (let j = i + 2; j < shuffled.length; j++) {
+          if (shuffled[j].author !== shuffled[i].author) {
+            [shuffled[i + 1], shuffled[j]] = [shuffled[j], shuffled[i + 1]];
+            break;
+          }
+        }
+      }
+    }
+    
+    return shuffled;
+  };
+
+  // Embla 캐러셀 설정
+  const [emblaRef] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: 'start',
+      duration: 30,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
+
+  // 후기 배열 재정렬 (같은 작성자 연속 방지)
+  const testimonials = shuffleAvoidingConsecutive(allTestimonials);
+
   const blogTestimonials = [
     {
       title: "모닝리추얼 챌린지 후기",
@@ -372,8 +403,8 @@ const Testimonials = () => {
 
         {/* 자동 슬라이딩 캐러셀 */}
         <div className="overflow-hidden mb-12" ref={emblaRef}>
-          <div className="flex gap-6">
-            {allTestimonials.map((testimonial, index) => (
+          <div className="flex gap-6 transition-transform duration-700 ease-out">
+            {testimonials.map((testimonial, index) => (
               <div key={index} className="flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0">
                 <Card className="border-border hover:shadow-lg transition-all duration-300 h-full">
                   <CardContent className="p-6">

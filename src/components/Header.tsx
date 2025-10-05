@@ -64,8 +64,8 @@ const Header = () => {
               후기
             </button>
             
-            {/* User Navigation */}
-            {user && (
+            {/* User Navigation - 임시 숨김 */}
+            {/* {user && (
               <>
                 <button 
                   onClick={() => navigate('/dashboard')}
@@ -82,11 +82,11 @@ const Header = () => {
                   </button>
                 )}
               </>
-            )}
+            )} */}
           </nav>
 
-          {/* Auth Buttons - Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Auth Buttons - Desktop - 임시 숨김 */}
+          {/* <div className="hidden md:flex items-center space-x-4">
             {user ? (
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-3">
@@ -146,7 +146,7 @@ const Header = () => {
                 </Button>
               </>
             )}
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button 
@@ -202,8 +202,8 @@ const Header = () => {
                 후기
               </button>
               
-              {/* User Navigation - Mobile */}
-              {user && (
+              {/* User Navigation - Mobile - 임시 숨김 */}
+              {/* {user && (
                 <>
                   <button 
                     onClick={() => {
@@ -228,10 +228,10 @@ const Header = () => {
                     </button>
                   )}
                 </>
-              )}
+              )} */}
               
-              {/* Auth Buttons - Mobile */}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
+              {/* Auth Buttons - Mobile - 임시 숨김 */}
+              {/* <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 {user ? (
                   <div className="space-y-2">
                     <div className="text-sm text-muted-foreground">
@@ -280,16 +280,17 @@ const Header = () => {
                     </Button>
                   </>
                 )}
-              </div>
+              </div> */}
             </div>
           </nav>
         )}
         
-        <AuthDialog 
+        {/* AuthDialog - 임시 숨김 */}
+        {/* <AuthDialog 
           isOpen={authDialogOpen}
           onClose={() => setAuthDialogOpen(false)}
           defaultTab={authDialogTab}
-        />
+        /> */}
       </div>
     </header>
   );

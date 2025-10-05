@@ -24,7 +24,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/challenge/:challengeId" element={<ChallengeDetail />} />
-            <Route path="/dashboard" element={
+            {/* 임시 숨김: 로그인/대시보드 기능 */}
+            {/* <Route path="/dashboard" element={
               <ProtectedRoute>
                 <Dashboard />
               </ProtectedRoute>
@@ -33,7 +34,7 @@ const App = () => (
               <ProtectedRoute adminOnly>
                 <AdminPanel />
               </ProtectedRoute>
-            } />
+            } /> */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

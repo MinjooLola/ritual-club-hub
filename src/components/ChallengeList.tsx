@@ -120,9 +120,9 @@ const ChallengeList = () => {
             ))}
           </div>
           
-          {/* 두 번째 줄: 독서, 영어 */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {challenges.slice(2, 4).map((challenge) => (
+          {/* 두 번째 줄: 독서, 영어, 운동 */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {challenges.slice(2, 5).map((challenge) => (
               <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">
@@ -154,9 +154,9 @@ const ChallengeList = () => {
             ))}
           </div>
           
-          {/* 세 번째 줄: 운동, 기록, 정리 */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {challenges.slice(4).map((challenge) => (
+          {/* 세 번째 줄: 기록, 정리 */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {challenges.slice(5).map((challenge) => (
               <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">

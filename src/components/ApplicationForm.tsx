@@ -20,9 +20,16 @@ const ApplicationForm = () => {
             <h3 className="text-4xl font-bold text-foreground mb-4">
               리추얼클럽 참여하기
             </h3>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground mb-6">
               10월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
             </p>
+            <div className="bg-card border border-border rounded-lg p-6 max-w-2xl mx-auto">
+              <div className="space-y-2 text-muted-foreground">
+                <p>• 1개 챌린지 참여: 참가비 5만원 + 보증금 1.5만원</p>
+                <p>• 2개 챌린지 참여: 참가비 9만원 + 보증금 3만원</p>
+                <p>• 무제한 챌린지 참여: 참가비 12만원 + 보증금 3만원</p>
+              </div>
+            </div>
           </div>
 
           {/* 모집 마감 안내 */}

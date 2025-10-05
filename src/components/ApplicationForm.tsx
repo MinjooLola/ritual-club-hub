@@ -28,17 +28,17 @@ const ApplicationForm = () => {
               <h4 className="text-xl font-bold text-center mb-4 text-foreground">참가비 안내</h4>
               
               {/* 추천 메시지 */}
-              <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-2 border-purple-300 dark:border-purple-700 rounded-lg p-4 mb-6">
-                <p className="text-center font-bold text-purple-700 dark:text-purple-300 mb-2">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 border-2 border-blue-300 dark:border-blue-700 rounded-lg p-4 mb-6">
+                <p className="text-center font-bold text-blue-700 dark:text-blue-300 mb-2">
                   ⭐ 여러 습관을 함께 만들고 싶다면, 지금이 기회입니다
                 </p>
-                <p className="text-center text-sm text-purple-600 dark:text-purple-400">
+                <p className="text-center text-sm text-blue-600 dark:text-blue-400">
                   습관들이 서로 시너지를 내며 삶 전체가 바뀌는 경험을 하게 됩니다
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                <div className="text-center p-4 bg-muted/50 rounded-lg">
+                <div className="text-center p-4 bg-slate-50 dark:bg-slate-900/30 rounded-lg border border-slate-200 dark:border-slate-800">
                   <p className="font-bold text-lg text-foreground mb-1">1개 챌린지</p>
                   <p className="text-2xl font-bold text-foreground">5만원</p>
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
@@ -46,16 +46,16 @@ const ApplicationForm = () => {
                   <p className="text-xs text-muted-foreground">보증금</p>
                   <p className="text-xs text-muted-foreground mt-2">(개당 5만원)</p>
                 </div>
-                <div className="text-center p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg border-2 border-purple-200 dark:border-purple-800">
+                <div className="text-center p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg border-2 border-indigo-300 dark:border-indigo-700">
                   <p className="font-bold text-lg text-foreground mb-1">2개 챌린지</p>
                   <p className="text-2xl font-bold text-foreground">9만원</p>
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 3만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
-                  <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-2">(개당 4.5만원)</p>
+                  <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold mt-2">(개당 4.5만원)</p>
                 </div>
-                <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-lg border-2 border-amber-300 dark:border-amber-700 relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <div className="text-center p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-lg border-2 border-emerald-400 dark:border-emerald-600 relative shadow-md">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                     BEST 추천
                   </div>
                   <p className="font-bold text-lg text-foreground mb-1 mt-1">무제한 챌린지</p>
@@ -63,8 +63,8 @@ const ApplicationForm = () => {
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 3만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
-                  <p className="text-xs text-amber-700 dark:text-amber-400 font-bold mt-2">(7개 참여 시 개당 1.7만원)</p>
-                  <p className="text-xs text-amber-600 dark:text-amber-500 mt-1">💡 3개 이상 도전하고 싶다면!</p>
+                  <p className="text-xs text-emerald-700 dark:text-emerald-400 font-bold mt-2">(7개 참여 시 개당 1.7만원)</p>
+                  <p className="text-xs text-emerald-600 dark:text-emerald-500 mt-1">💡 3개 이상 도전하고 싶다면!</p>
                   <p className="text-xs text-muted-foreground/70 italic mt-0.5">*추가 보증금은 리추얼클럽에서 지원합니다</p>
                 </div>
               </div>

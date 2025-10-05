@@ -111,7 +111,7 @@ const ApplicationForm = () => {
               
               {/* 신청 기간 */}
               <div className="mt-6 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감!</h5>
+                <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감 예정!</h5>
                 <div className="space-y-3 text-center">
                   <div>
                     <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 신청 기간</p>

@@ -45,6 +45,7 @@ const ApplicationForm = () => {
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 1.5만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
+                  <p className="text-xs text-muted-foreground mt-2">(개당 5만원)</p>
                 </div>
                 <div className="text-center p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg border-2 border-purple-200 dark:border-purple-800">
                   <p className="font-bold text-lg text-foreground mb-1">2개 챌린지</p>
@@ -52,13 +53,19 @@ const ApplicationForm = () => {
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 3만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
+                  <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-2">(개당 4.5만원)</p>
                 </div>
-                <div className="text-center p-4 bg-muted/50 rounded-lg">
-                  <p className="font-bold text-lg text-foreground mb-1">무제한 챌린지</p>
+                <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-lg border-2 border-amber-300 dark:border-amber-700 relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    BEST 추천
+                  </div>
+                  <p className="font-bold text-lg text-foreground mb-1 mt-1">무제한 챌린지</p>
                   <p className="text-2xl font-bold text-foreground">12만원</p>
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 3만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
+                  <p className="text-xs text-amber-700 dark:text-amber-400 font-bold mt-2">(7개 시 개당 1.7만원!)</p>
+                  <p className="text-xs text-amber-600 dark:text-amber-500 mt-1">💡 3개 이상이면 무제한이 이득</p>
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground italic mb-2">

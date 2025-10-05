@@ -20,8 +20,8 @@ const ChallengeList = () => {
     {
       id: "reading",
       title: "독서리추얼챌린지",
-      description: "자기 전 온라인으로 함께 책 읽기",
-      time: "평일(월~금) 밤 10:30~11:00",
+      description: "인생을 바꾸는 독서 & 기록 습관 만들기",
+      time: "주 5회 최소 30분 이상 책 읽기",
       type: "독서 인증 챌린지",
       color: "bg-indigo-50 border-indigo-200",
       icon: <Moon className="w-6 h-6 text-indigo-600" />
@@ -80,9 +80,16 @@ const ChallengeList = () => {
           <h3 className="text-4xl font-bold text-foreground mb-4">
             챌린지 종류
           </h3>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             7가지 다양한 챌린지 중 원하는 것을 선택해서 참여할 수 있습니다
           </p>
+          <div className="bg-card border border-border rounded-lg p-6 max-w-2xl mx-auto">
+            <div className="space-y-2 text-muted-foreground">
+              <p>• 1개 챌린지 참여: 참가비 5만원 + 보증금 1.5만원</p>
+              <p>• 2개 챌린지 참여: 참가비 9만원 + 보증금 3만원</p>
+              <p>• 무제한 챌린지 참여: 참가비 12만원 + 보증금 3만원</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

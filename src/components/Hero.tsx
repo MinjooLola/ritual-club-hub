@@ -18,7 +18,7 @@ const Hero = () => {
             <span className="text-primary block">Ritual Club</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in max-w-2xl mx-auto">
-            3주간 포기할 수 없도록 구성된 프로그램으로 지속가능한 습관을 만듭니다
+            3주간의 체계적인 습관 형성 챌린지로 더 나은 나를 만들어가세요
           </p>
           
           {/* 모집 기간 강조 */}

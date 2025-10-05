@@ -109,28 +109,22 @@ const ApplicationForm = () => {
               </div>
               
               {/* 신청 기간 */}
-              <div className="mt-6 bg-card border border-border rounded-lg p-4">
-                <h5 className="text-lg font-bold text-center mb-3 text-foreground">선착순 모집 마감!</h5>
-                <div className="space-y-2 text-center text-sm">
+              <div className="mt-6 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
+                <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감!</h5>
+                <div className="space-y-3 text-center">
                   <div>
-                    <p className="font-semibold text-foreground">기존 챌린저 신청 기간</p>
-                    <p className="text-muted-foreground">10/5(일) ~ 10/6(월)</p>
+                    <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 신청 기간</p>
+                    <p className="text-red-600 dark:text-red-500">10/5(일) ~ 10/6(월)</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">신규 챌린저 신청 기간</p>
-                    <p className="text-muted-foreground">10/7(화) ~ 10/9(목)</p>
+                    <p className="font-semibold text-red-700 dark:text-red-400">신규 챌린저 신청 기간</p>
+                    <p className="text-red-600 dark:text-red-500">10/7(화) ~ 10/9(목)</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* 모집 마감 안내 */}
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8 text-center">
-            <h4 className="text-xl font-bold text-red-700 mb-2">모집 마감 임박!</h4>
-            <p className="text-red-600 mb-1">신청 기간: 10/7(화)~10/9(목) [선착순]</p>
-            <p className="text-red-600 text-sm">*기존 챌린저 할인 신청 마감: 10/6(월)</p>
-          </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300">

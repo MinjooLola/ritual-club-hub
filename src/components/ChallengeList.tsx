@@ -194,10 +194,11 @@ const ChallengeList = () => {
           <div className="bg-card rounded-xl p-8 border border-border shadow-lg">
             <h4 className="text-2xl font-bold text-center mb-8">챌린지 일정</h4>
             <div className="text-center">
-              <h5 className="text-xl font-semibold text-purple-600 mb-4">39기 리추얼클럽 챌린저 모집중</h5>
-              <p className="text-muted-foreground">10/10(목) ~ 10/30(수)</p>
-              <p className="text-sm text-muted-foreground mt-2">(3주 프로그램)</p>
-              <p className="text-sm text-muted-foreground">(*OT는 10/9(수) 저녁 중 시간 조율하여 진행)</p>
+              <h5 className="text-xl font-semibold text-purple-600 mb-4">39기 리추얼클럽 챌린저 모집중(~10/9)</h5>
+              <p className="text-muted-foreground mb-2">10/13(월) ~ 10/31(금)</p>
+              <p className="text-sm text-muted-foreground mb-2">(3주 프로그램)</p>
+              <p className="text-sm text-muted-foreground">*OT: 10/13(월) 밤 10시, Final 공유회: 10/31(금) 밤 10시</p>
+              <p className="text-sm text-muted-foreground">(참석 어려울 경우 별도 조율 or 녹화본 제공)</p>
             </div>
           </div>
         </div>

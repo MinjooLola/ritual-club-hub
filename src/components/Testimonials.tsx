@@ -1,6 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import testimonialsHeader from "@/assets/testimonials-header.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -40,6 +40,14 @@ const Testimonials = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             리추얼클럽을 통해 변화를 경험한 실제 참가자들의 생생한 후기입니다
           </p>
+        </div>
+
+        <div className="mb-12">
+          <img 
+            src={testimonialsHeader} 
+            alt="참가자 후기 모음" 
+            className="w-full max-w-5xl mx-auto rounded-lg shadow-lg"
+          />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

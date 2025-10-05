@@ -370,14 +370,6 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="mb-12">
-          <img 
-            src={testimonialsHeader} 
-            alt="참가자 후기 모음" 
-            className="w-full max-w-5xl mx-auto rounded-lg shadow-lg"
-          />
-        </div>
-
         {/* 자동 슬라이딩 캐러셀 */}
         <div className="overflow-hidden mb-12" ref={emblaRef}>
           <div className="flex gap-6 transition-transform duration-700 ease-out">
@@ -427,6 +419,14 @@ const Testimonials = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          <div className="mt-12">
+            <img 
+              src={testimonialsHeader} 
+              alt="참가자 후기 모음" 
+              className="w-full max-w-5xl mx-auto rounded-lg shadow-lg"
+            />
           </div>
         </div>
 

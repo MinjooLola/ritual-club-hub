@@ -341,6 +341,10 @@ const Testimonials = () => {
 
   const blogTestimonials = [
     {
+      title: "모닝리추얼챌린지 참여후기",
+      link: "https://blog.naver.com/heavenlee63/224023811675"
+    },
+    {
       title: "모닝리추얼 챌린지 후기",
       link: "https://blog.naver.com/minjow1996/223495565888"
     },
@@ -349,20 +353,12 @@ const Testimonials = () => {
       link: "https://blog.naver.com/minjow1996/223830499174"
     },
     {
-      title: "나이트리추얼챌린지 참여후기",
-      link: "https://blog.naver.com/luckyto_u/223369771120"
-    },
-    {
-      title: "나이트리추얼챌린지 참여후기",
-      link: "https://m.blog.naver.com/ljrim3398/223372089399"
-    },
-    {
       title: "운동리추얼챌린지 & 기록리추얼챌린지 후기",
       link: "https://blog.naver.com/gamzzang-/223988087412"
     },
     {
-      title: "나이트리추얼챌린지 참여후기",
-      link: "https://blog.naver.com/heavenlee63/224023811675"
+      title: "독서리추얼챌린지 참여후기",
+      link: "https://blog.naver.com/minjow1996/224032460766"
     }
   ];
 

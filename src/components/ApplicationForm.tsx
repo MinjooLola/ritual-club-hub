@@ -77,7 +77,7 @@ const ApplicationForm = () => {
                   </span>
                 </h5>
                 <div className="space-y-2 text-sm">
-                  <div className="flex items-start space-x-2">
+                  <div className="flex flex-col items-center space-y-1 text-center">
                     <span className="text-purple-600 flex-shrink-0">✔</span>
                     <div>
                       <p className="font-semibold text-foreground">기존 챌린저 습관 지속 쿠폰</p>
@@ -85,14 +85,14 @@ const ApplicationForm = () => {
                       <p className="text-xs text-muted-foreground italic">*기존 챌린저 모집 기간에 신청해야 적용 가능</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-2">
+                  <div className="flex flex-col items-center space-y-1 text-center">
                     <span className="text-purple-600 flex-shrink-0">✔</span>
                     <div>
                       <p className="font-semibold text-foreground">친구 초대 쿠폰</p>
                       <p className="text-muted-foreground">신규 멤버와 기존 멤버 모두 2만원 할인</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-2">
+                  <div className="flex flex-col items-center space-y-1 text-center">
                     <span className="text-purple-600 flex-shrink-0">✔</span>
                     <div>
                       <p className="font-semibold text-foreground">블로그 모집 링크 공유 쿠폰</p>

@@ -45,16 +45,7 @@ const Header = () => {
             >
               챌린지
             </button>
-            <button 
-              onClick={() => {
-                navigate('/');
-                setTimeout(() => scrollToSection('community'), 100);
-              }}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              커뮤니티
-            </button>
-            <button 
+            <button
               onClick={() => {
                 navigate('/');
                 setTimeout(() => scrollToSection('application'), 100);
@@ -190,17 +181,7 @@ const Header = () => {
               >
                 챌린지
               </button>
-              <button 
-                onClick={() => {
-                  navigate('/');
-                  setTimeout(() => scrollToSection('community'), 100);
-                  setIsMenuOpen(false);
-                }}
-                className="text-left text-muted-foreground hover:text-primary transition-colors"
-              >
-                커뮤니티
-              </button>
-              <button 
+              <button
                 onClick={() => {
                   navigate('/');
                   setTimeout(() => scrollToSection('application'), 100);

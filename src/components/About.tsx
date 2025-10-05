@@ -7,17 +7,17 @@ const About = () => {
     {
       icon: Target,
       title: "체계적인 습관 형성",
-      description: "3주간 단계별로 구성된 프로그램으로 지속가능한 습관을 만듭니다"
+      description: "3주간 포기할 수 없도록 구성된 프로그램으로 지속가능한 습관을 만듭니다"
     },
     {
       icon: Users,
-      title: "함께하는 동반자",
+      title: "함께하는 챌린저",
       description: "같은 목표를 가진 사람들과 함께 동기부여를 받으며 성장합니다"
     },
     {
       icon: Calendar,
-      title: "Live 진행",
-      description: "모닝/나이트 챌린지는 매일 온라인 Live로 실시간 소통합니다"
+      title: "맞춤형 밀착 관리",
+      description: "온라인 Live와 챌린저 전용 단톡방에서 실시간으로 소통합니다"
     },
     {
       icon: Heart,
@@ -35,7 +35,7 @@ const About = () => {
           </h3>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             2022년부터 시작된 체계적인 3주 챌린지를 통해 건강한 습관을 형성하고, 
-            함께하는 동반자들과 성장하는 커뮤니티입니다.
+            함께하는 챌린저들과 성장하는 커뮤니티입니다.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const About = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">최고 기록:</strong> 최대 48회 참여한 멤버까지!
+                    <strong className="text-foreground">최고 기록:</strong> 최대 49회 참여한 멤버까지!
                   </p>
                 </div>
               </div>
@@ -103,7 +103,7 @@ const About = () => {
                 <p className="text-muted-foreground">체계적 프로그램</p>
               </div>
               <div className="bg-green-50 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">6종</div>
+                <div className="text-3xl font-bold text-primary mb-2">7종</div>
                 <p className="text-muted-foreground">다양한 챌린지</p>
               </div>
             </div>

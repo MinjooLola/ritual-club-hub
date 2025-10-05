@@ -18,13 +18,14 @@ const Hero = () => {
             <span className="text-primary block">Ritual Club</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in max-w-2xl mx-auto">
-            3주간의 체계적인 습관 형성 챌린지로 더 나은 나를 만들어가세요
+            3주간 포기할 수 없도록 구성된 프로그램으로 지속가능한 습관을 만듭니다
           </p>
           
           {/* 모집 기간 강조 */}
           <div className="bg-accent/20 border border-accent/30 rounded-lg p-4 mb-8 max-w-md mx-auto">
             <p className="text-accent-foreground font-semibold text-lg">10월 챌린지 모집 중!</p>
-            <p className="text-accent-foreground/80">10/9(목) 자정까지</p>
+            <p className="text-accent-foreground/80 mb-1">모집 마감: 10/9(목) (선착순)</p>
+            <p className="text-accent-foreground/80 text-sm">*얼리버드 신청(1만원 할인) 마감: 10/7(화)</p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">

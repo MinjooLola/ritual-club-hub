@@ -28,7 +28,8 @@ const ApplicationForm = () => {
           {/* 모집 마감 안내 */}
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8 text-center">
             <h4 className="text-xl font-bold text-red-700 mb-2">모집 마감 임박!</h4>
-            <p className="text-red-600">~ 10/9(수) 오전까지 (선착순 모집)</p>
+            <p className="text-red-600 mb-1">모집 마감: 10/9(목) (선착순)</p>
+            <p className="text-red-600 text-sm">*얼리버드 신청(1만원 할인) 마감: 10/7(화)</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">

@@ -64,7 +64,7 @@ const ApplicationForm = () => {
               <p className="text-center text-sm text-muted-foreground italic mb-2">
                 * 인증 실패 시 보증금이 차감되며, 챌린지에 성공할 경우 보증금은 전액 환불됩니다.
               </p>
-              <p className="text-center text-sm text-muted-foreground">
+              <p className="text-center text-sm text-muted-foreground italic mb-6">
                 * 차감된 보증금은 네이버 해피빈을 통해 챌린저 분들의 이름으로 전액 기부됩니다.
               </p>
               

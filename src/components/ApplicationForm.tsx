@@ -23,6 +23,15 @@ const ApplicationForm = () => {
             <p className="text-xl text-muted-foreground mb-6">
               10월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
             </p>
+            
+            {/* 진지한 각오 필요 메시지 */}
+            <div className="bg-amber-50 dark:bg-amber-950/20 border-2 border-amber-400 dark:border-amber-600 rounded-lg p-6 mb-8">
+              <p className="text-center text-lg font-semibold text-amber-900 dark:text-amber-200">
+                20년 넘게 굳어져 온 습관을 바꾸는 일은 절대 쉽지 않습니다. <br />
+                변화를 위해 굳게 마음먹으신 분들만 신청해주세요!
+              </p>
+            </div>
+            
             {/* 참가비 안내 */}
             <div className="bg-card border border-border rounded-lg p-6 max-w-3xl mx-auto mb-8">
               <h4 className="text-xl font-bold text-center mb-4 text-foreground">참가비 안내</h4>

@@ -18,6 +18,15 @@ const ChallengeList = () => {
       icon: <Clock className="w-6 h-6 text-orange-600" />
     },
     {
+      id: "night",
+      title: "나이트리추얼챌린지",
+      description: "자기 전 하루를 마무리하는 나만의 리추얼 만들기",
+      time: "평일(월~금) 밤 10:30~11:00",
+      type: "온라인 Live 진행",
+      color: "bg-violet-50 border-violet-200",
+      icon: <Moon className="w-6 h-6 text-violet-600" />
+    },
+    {
       id: "reading",
       title: "독서리추얼챌린지",
       description: "인생을 바꾸는 독서 & 기록 습관 만들기",
@@ -61,15 +70,6 @@ const ChallengeList = () => {
       type: "정리 인증 챌린지",
       color: "bg-pink-50 border-pink-200",
       icon: <Users className="w-6 h-6 text-pink-600" />
-    },
-    {
-      id: "night",
-      title: "나이트리추얼챌린지",
-      description: "자기 전 하루를 마무리하는 나만의 리추얼 만들기",
-      time: "평일(월~금) 밤 10:30~11:00",
-      type: "온라인 Live 진행",
-      color: "bg-slate-50 border-slate-200",
-      icon: <Moon className="w-6 h-6 text-slate-600" />
     }
   ];
 
@@ -85,37 +85,108 @@ const ChallengeList = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {challenges.map((challenge) => (
-            <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-3">
-                  {challenge.icon}
-                  <span className="text-xl">{challenge.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{challenge.description}</p>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center space-x-2 text-sm">
-                    <Clock className="w-4 h-4" />
-                    <span>{challenge.time}</span>
+        <div className="space-y-6 max-w-6xl mx-auto">
+          {/* 첫 번째 줄: 모닝, 나이트 */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {challenges.slice(0, 2).map((challenge) => (
+              <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-3">
+                    {challenge.icon}
+                    <span className="text-xl">{challenge.title}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Clock className="w-4 h-4" />
+                      <span>{challenge.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Video className="w-4 h-4" />
+                      <span>{challenge.type}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm">
-                    <Video className="w-4 h-4" />
-                    <span>{challenge.type}</span>
+                  <Button 
+                    onClick={() => navigate(`/challenge/${challenge.id}`)}
+                    className="w-full"
+                    variant="outline"
+                  >
+                    자세히 보기
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* 두 번째 줄: 독서, 영어 */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {challenges.slice(2, 4).map((challenge) => (
+              <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-3">
+                    {challenge.icon}
+                    <span className="text-xl">{challenge.title}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Clock className="w-4 h-4" />
+                      <span>{challenge.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Video className="w-4 h-4" />
+                      <span>{challenge.type}</span>
+                    </div>
                   </div>
-                </div>
-                <Button 
-                  onClick={() => navigate(`/challenge/${challenge.id}`)}
-                  className="w-full"
-                  variant="outline"
-                >
-                  자세히 보기
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                  <Button 
+                    onClick={() => navigate(`/challenge/${challenge.id}`)}
+                    className="w-full"
+                    variant="outline"
+                  >
+                    자세히 보기
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* 세 번째 줄: 운동, 기록, 정리 */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {challenges.slice(4).map((challenge) => (
+              <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-3">
+                    {challenge.icon}
+                    <span className="text-xl">{challenge.title}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Clock className="w-4 h-4" />
+                      <span>{challenge.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm">
+                      <Video className="w-4 h-4" />
+                      <span>{challenge.type}</span>
+                    </div>
+                  </div>
+                  <Button 
+                    onClick={() => navigate(`/challenge/${challenge.id}`)}
+                    className="w-full"
+                    variant="outline"
+                  >
+                    자세히 보기
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* 챌린지 일정 */}

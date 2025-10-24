@@ -21,7 +21,7 @@ const ApplicationForm = () => {
               리추얼클럽 참여하기
             </h3>
             <p className="text-xl text-muted-foreground mb-6">
-              10월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
+              11월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
             </p>
             
             {/* 참가비 안내 */}
@@ -116,12 +116,12 @@ const ApplicationForm = () => {
                 <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감 예정!</h5>
                 <div className="space-y-3 text-center">
                   <div>
-                    <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 신청 기간</p>
-                    <p className="text-red-600 dark:text-red-500">10/5(일) ~ 10/6(월)</p>
+                    <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 할인 신청 마감</p>
+                    <p className="text-red-600 dark:text-red-500">~11/3(월)</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-red-700 dark:text-red-400">신규 챌린저 신청 기간</p>
-                    <p className="text-red-600 dark:text-red-500">10/7(화) ~ 10/9(목)</p>
+                    <p className="font-semibold text-red-700 dark:text-red-400">신청 마감일</p>
+                    <p className="text-red-600 dark:text-red-500">~11/5(수)</p>
                   </div>
                 </div>
               </div>

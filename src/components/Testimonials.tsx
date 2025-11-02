@@ -399,6 +399,18 @@ const Testimonials = () => {
     {
       title: "운동 & 기록 리추얼 챌린저 후기",
       link: "https://blog.naver.com/gamzzang-/223988087412"
+    },
+    {
+      title: "기록리추얼 챌린저 후기",
+      link: "https://blog.naver.com/heavenlee63/224061871122"
+    },
+    {
+      title: "모닝리추얼 & 독서리추얼 챌린저 후기",
+      link: "https://blog.naver.com/gamzzang-/224062220609"
+    },
+    {
+      title: "나이트리추얼 챌린저 후기",
+      link: "https://blog.naver.com/nan_da/224062111160"
     }
   ];
 

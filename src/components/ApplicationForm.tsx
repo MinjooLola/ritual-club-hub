@@ -117,11 +117,11 @@ const ApplicationForm = () => {
                 <div className="space-y-3 text-center">
                   <div>
                     <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 할인 신청 마감</p>
-                    <p className="text-red-600 dark:text-red-500">~11/3(월)</p>
+                    <p className="text-red-600 dark:text-red-500">~11/5(수)</p>
                   </div>
                   <div>
                     <p className="font-semibold text-red-700 dark:text-red-400">신청 마감일</p>
-                    <p className="text-red-600 dark:text-red-500">~11/5(수)</p>
+                    <p className="text-red-600 dark:text-red-500">~11/7(금)</p>
                   </div>
                 </div>
               </div>

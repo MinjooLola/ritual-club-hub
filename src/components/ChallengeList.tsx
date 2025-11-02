@@ -63,11 +63,11 @@ const ChallengeList = () => {
       icon: <Calendar className="w-6 h-6 text-purple-600" />
     },
     {
-      id: "declutter",
-      title: "정리리추얼챌린지",
-      description: "내 공간을 정돈하고 불필요한 것들을 비우며 여유 찾기",
-      time: "주 5회 공간 정리(책상, 부엌, 거실 등) or 비움 인증",
-      type: "정리 인증 챌린지",
+      id: "spanish",
+      title: "스페인어리추얼챌린지",
+      description: "각자 원하는 스페인어 공부 방식으로 실력 향상",
+      time: "주 5회 최소 30분 이상 스페인어 공부",
+      type: "스페인어 공부 인증 챌린지",
       color: "bg-pink-50 border-pink-200",
       icon: <Users className="w-6 h-6 text-pink-600" />
     }

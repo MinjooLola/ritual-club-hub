@@ -33,12 +33,12 @@ const Hero = () => {
               
               <div className="bg-background/50 rounded-md p-3">
                 <p className="text-accent-foreground font-semibold mb-1">✍️ 신청 마감일</p>
-                <p className="text-accent-foreground/90 text-lg">~11/5(수) <span className="text-sm font-semibold text-red-600">[선착순]</span></p>
+                <p className="text-accent-foreground/90 text-lg">~11/7(금) <span className="text-sm font-semibold text-red-600">[선착순]</span></p>
               </div>
               
               <div className="bg-primary/10 border border-primary/30 rounded-md p-3">
                 <p className="text-primary font-semibold text-sm">💡 기존 챌린저 할인 신청 마감</p>
-                <p className="text-primary/90 font-medium">~11/3(월)</p>
+                <p className="text-primary/90 font-medium">~11/5(수)</p>
               </div>
             </div>
           </div>

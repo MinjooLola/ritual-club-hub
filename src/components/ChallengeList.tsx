@@ -64,7 +64,7 @@ const ChallengeList = () => {
     },
     {
       id: "spanish",
-      title: "스페인어리추얼챌린지",
+      title: "스페인어리추얼챌린지 (신규)",
       description: "각자 원하는 스페인어 공부 방식으로 실력 향상",
       time: "주 5회 최소 30분 이상 스페인어 공부",
       type: "스페인어 공부 인증 챌린지",

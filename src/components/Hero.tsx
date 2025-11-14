@@ -23,7 +23,7 @@ const Hero = () => {
           
           {/* 모집 기간 강조 */}
           <div className="bg-accent/20 border border-accent/30 rounded-lg p-6 mb-8 max-w-lg mx-auto">
-            <p className="text-accent-foreground font-bold text-xl mb-4">11월 챌린지(40기) 모집 중!</p>
+            <p className="text-accent-foreground font-bold text-xl mb-4">11월 챌린지(40기) 모집 마감</p>
             
             <div className="space-y-3 text-left">
               <div className="bg-background/50 rounded-md p-3">

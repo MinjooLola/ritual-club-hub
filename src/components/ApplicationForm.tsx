@@ -21,7 +21,7 @@ const ApplicationForm = () => {
               리추얼클럽 참여하기
             </h3>
             <p className="text-xl text-muted-foreground mb-6">
-              11월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
+              11월 챌린지 모집이 마감되었습니다.
             </p>
             
             {/* 참가비 안내 */}
@@ -113,7 +113,7 @@ const ApplicationForm = () => {
               
               {/* 신청 기간 */}
               <div className="mt-6 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감 예정!</h5>
+                <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감!</h5>
                 <div className="space-y-3 text-center">
                   <div>
                     <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 할인 신청 마감</p>
@@ -181,7 +181,7 @@ const ApplicationForm = () => {
               <h4 className="text-xl font-bold text-foreground mb-4">참여 안내</h4>
               <div className="space-y-3 text-muted-foreground">
                 <p>• 모든 챌린지는 3주 프로그램으로 진행됩니다</p>
-                <p>• 선착순 모집으로 조기 마감될 수 있습니다</p>
+                <p>• 모집이 마감되었습니다</p>
                 <p>• 참여비 및 자세한 내용은 신청 폼에서 확인하세요</p>
                 <p>• 문의사항은 카카오톡 오픈채팅을 이용해주세요</p>
               </div>

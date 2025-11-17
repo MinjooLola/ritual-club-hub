@@ -89,7 +89,6 @@ const ApplicationForm = () => {
                     <span className="text-purple-600 flex-shrink-0">✔</span>
                     <div>
                       <p className="font-semibold text-foreground">기존 챌린저 습관 지속 쿠폰</p>
-                      <p className="text-muted-foreground">직전 기수 출석률 90% 이상 챌린저 2만원 할인</p>
                       <p className="text-muted-foreground">직전 기수 리추얼클럽 챌린저 1만원 할인</p>
                       <p className="text-xs text-muted-foreground italic">*기존 챌린저 모집 기간에 신청해야 적용 가능</p>
                     </div>

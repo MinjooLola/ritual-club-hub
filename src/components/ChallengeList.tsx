@@ -18,19 +18,10 @@ const ChallengeList = () => {
       icon: <Clock className="w-6 h-6 text-orange-600" />
     },
     {
-      id: "night",
-      title: "나이트리추얼챌린지",
-      description: "자기 전 하루를 마무리하는 나만의 리추얼 만들기",
-      time: "평일(월~금) 밤 10:30~11:00",
-      type: "온라인 Live 진행",
-      color: "bg-violet-50 border-violet-200",
-      icon: <Moon className="w-6 h-6 text-violet-600" />
-    },
-    {
       id: "reading",
       title: "독서리추얼챌린지",
       description: "인생을 바꾸는 독서 & 기록 습관 만들기",
-      time: "주 5회 최소 30분 이상 책 읽기",
+      time: "주 5회 최소 15분 이상 책 읽기 + 독서 기록",
       type: "독서 인증 챌린지",
       color: "bg-indigo-50 border-indigo-200",
       icon: <Moon className="w-6 h-6 text-indigo-600" />
@@ -39,7 +30,7 @@ const ChallengeList = () => {
       id: "english",
       title: "영어리추얼챌린지",
       description: "각자 원하는 영어공부 방식으로 실력 향상",
-      time: "주 5회 최소 30분 이상 영어공부",
+      time: "주 5회 최소 15분 이상 각자 원하는 시간에 공부 인증",
       type: "영어공부 인증 챌린지",
       color: "bg-blue-50 border-blue-200",
       icon: <Video className="w-6 h-6 text-blue-600" />
@@ -66,7 +57,7 @@ const ChallengeList = () => {
       id: "spanish",
       title: "스페인어리추얼챌린지 (신규)",
       description: "각자 원하는 스페인어 공부 방식으로 실력 향상",
-      time: "주 5회 최소 30분 이상 스페인어 공부",
+      time: "주 5회 최소 15분 이상 각자 원하는 시간에 공부 인증",
       type: "스페인어 공부 인증 챌린지",
       color: "bg-pink-50 border-pink-200",
       icon: <Users className="w-6 h-6 text-pink-600" />
@@ -81,7 +72,7 @@ const ChallengeList = () => {
             챌린지 종류
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
-            7가지 다양한 챌린지 중 원하는 것을 선택해서 참여할 수 있습니다
+            6가지 다양한 챌린지 중 원하는 것을 선택해서 참여할 수 있습니다
           </p>
           
           {/* 시너지 효과 강조 */}
@@ -114,9 +105,9 @@ const ChallengeList = () => {
         </div>
 
         <div className="space-y-6 max-w-6xl mx-auto">
-          {/* 첫 번째 줄: 모닝, 나이트 */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {challenges.slice(0, 2).map((challenge) => (
+          {/* 첫 번째 줄: 모닝 */}
+          <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
+            {challenges.slice(0, 1).map((challenge) => (
               <Card key={challenge.id} className={`${challenge.color} hover:shadow-lg transition-all duration-300 cursor-pointer`}>
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">

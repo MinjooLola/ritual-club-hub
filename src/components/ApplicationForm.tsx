@@ -20,9 +20,17 @@ const ApplicationForm = () => {
             <h3 className="text-4xl font-bold text-foreground mb-4">
               리추얼클럽 참여하기
             </h3>
-            <p className="text-xl text-muted-foreground mb-6">
+            <p className="text-xl text-muted-foreground mb-4">
               12월 챌린지 모집 진행중입니다. 지금 바로 신청하세요!
             </p>
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-950/30 dark:to-orange-950/30 border-2 border-red-300 dark:border-red-700 rounded-lg p-4 mb-6">
+              <p className="text-center font-bold text-red-700 dark:text-red-300 text-lg mb-1">
+                🎯 올해의 마지막 챌린저 모집!
+              </p>
+              <p className="text-center text-sm text-red-600 dark:text-red-400">
+                2025년부터는 참가비가 인상될 예정입니다. 지금이 가장 합리적인 가격으로 참여할 수 있는 마지막 기회입니다!
+              </p>
+            </div>
             
             {/* 참가비 안내 */}
             <div className="bg-card border border-border rounded-lg p-6 max-w-3xl mx-auto mb-8">
@@ -45,66 +53,83 @@ const ApplicationForm = () => {
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 1.5만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
-                  <p className="text-xs text-muted-foreground mt-2">(개당 5만원)</p>
-                </div>
-                <div className="text-center p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg border-2 border-indigo-300 dark:border-indigo-700">
-                  <p className="font-bold text-lg text-foreground mb-1">2개 챌린지</p>
-                  <p className="text-2xl font-bold text-foreground">9만원</p>
-                  <p className="text-sm text-muted-foreground mb-2">참가비</p>
-                  <p className="text-lg font-semibold text-foreground">+ 3만원</p>
-                  <p className="text-xs text-muted-foreground">보증금</p>
-                  <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold mt-2">(개당 4.5만원)</p>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-lg border-2 border-emerald-400 dark:border-emerald-600 relative shadow-md">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                     BEST 추천
                   </div>
                   <p className="font-bold text-lg text-foreground mb-1 mt-1">무제한 챌린지</p>
+                  <p className="text-2xl font-bold text-foreground">9만원</p>
+                  <p className="text-sm text-muted-foreground mb-2">참가비</p>
+                  <p className="text-lg font-semibold text-foreground">+ 3만원</p>
+                  <p className="text-xs text-muted-foreground">보증금</p>
+                  <p className="text-xs text-emerald-700 dark:text-emerald-400 font-bold mt-2">★6개 챌린지 모두 자율 참여 가능</p>
+                  <p className="text-xs text-emerald-600 dark:text-emerald-500 mt-1">(개당 15,000원)</p>
+                </div>
+                <div className="text-center p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg border-2 border-indigo-300 dark:border-indigo-700">
+                  <p className="font-bold text-lg text-foreground mb-1">무제한 챌린지</p>
+                  <p className="font-bold text-lg text-foreground">+1:1 루틴 케어</p>
                   <p className="text-2xl font-bold text-foreground">12만원</p>
                   <p className="text-sm text-muted-foreground mb-2">참가비</p>
                   <p className="text-lg font-semibold text-foreground">+ 3만원</p>
                   <p className="text-xs text-muted-foreground">보증금</p>
-                  <p className="text-xs text-emerald-700 dark:text-emerald-400 font-bold mt-2">(7개 참여 시 개당 1.7만원)</p>
-                  <p className="text-xs text-emerald-600 dark:text-emerald-500 mt-1">💡 3개 이상 도전하고 싶다면!</p>
-                  <p className="text-xs text-muted-foreground/70 italic mt-0.5">*추가 보증금은 리추얼클럽에서 지원합니다</p>
                 </div>
               </div>
-              <p className="text-center text-sm text-muted-foreground italic mb-2">
-                * 인증 실패 시 보증금이 차감되며, 챌린지에 성공할 경우 보증금은 전액 환불됩니다.
-              </p>
-              <p className="text-center text-sm text-muted-foreground italic mb-6">
-                * 차감된 보증금은 네이버 해피빈을 통해 챌린저 분들의 이름으로 전액 기부됩니다.
-              </p>
+              <div className="space-y-2 text-sm text-muted-foreground mb-6">
+                <p className="text-center italic">
+                  * 인증 실패 시 보증금이 차감되며, 챌린지에 성공할 경우 보증금은 전액 환불됩니다.
+                </p>
+                <p className="text-center italic">
+                  * 모두에게 1번의 행복찬스가 주어집니다. 지각 or 결석 1회까지는 보증금을 차감하지 않습니다.
+                </p>
+                <p className="text-center italic">
+                  * 차감된 보증금은 참가자 모두의 이름으로 전액 해피빈을 통해 기부됩니다.
+                </p>
+                <p className="text-center italic">
+                  * 1:1 루틴 케어는 챌린지 진행 전 목표 세팅부터 진행 과정에서의 맞춤형 진단 및 코칭 프로그램입니다.
+                </p>
+                <p className="text-center italic">
+                  * 무제한 챌린지 참여 시 초과 차감된 보증금은 리추얼클럽에서 부담합니다.
+                </p>
+              </div>
               
               {/* 추가 할인 혜택 */}
               <div className="bg-purple-50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
                 <h5 className="font-bold text-center mb-2 text-foreground">
                   추가 할인 혜택
                   <span className="block text-sm font-normal text-muted-foreground mt-1">
-                    (*중복 할인 불가)
+                    (중복 할인 가능, 최대 3만원 할인)
                   </span>
                 </h5>
                 <div className="space-y-2 text-sm">
-                  <div className="flex flex-col items-center space-y-1 text-center">
-                    <span className="text-purple-600 flex-shrink-0">✔</span>
+                  <div className="flex items-start space-x-2">
+                    <span className="text-purple-600 flex-shrink-0 mt-0.5">1.</span>
                     <div>
-                      <p className="font-semibold text-foreground">기존 챌린저 습관 지속 쿠폰</p>
-                      <p className="text-muted-foreground">직전 기수 리추얼클럽 챌린저 1만원 할인</p>
-                      <p className="text-xs text-muted-foreground italic">*기존 챌린저 모집 기간에 신청해야 적용 가능</p>
+                      <p className="font-semibold text-foreground">친구 초대 이벤트 <span className="text-muted-foreground font-normal">(신규 멤버와 기존 멤버 모두 5천원 할인)</span></p>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center space-y-1 text-center">
-                    <span className="text-purple-600 flex-shrink-0">✔</span>
+                  <div className="flex items-start space-x-2">
+                    <span className="text-purple-600 flex-shrink-0 mt-0.5">2.</span>
                     <div>
-                      <p className="font-semibold text-foreground">친구 초대 쿠폰</p>
-                      <p className="text-muted-foreground">신규 멤버와 기존 멤버 모두 2만원 할인</p>
+                      <p className="font-semibold text-foreground">직전 기수 리추얼클럽 챌린저 <span className="text-muted-foreground font-normal">(5천원 할인)</span></p>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center space-y-1 text-center">
-                    <span className="text-purple-600 flex-shrink-0">✔</span>
+                  <div className="flex items-start space-x-2">
+                    <span className="text-purple-600 flex-shrink-0 mt-0.5">3.</span>
                     <div>
-                      <p className="font-semibold text-foreground">블로그 모집 링크 공유 쿠폰</p>
-                      <p className="text-muted-foreground">블로그에 모집 링크 포스팅 시 5천원 할인</p>
+                      <p className="font-semibold text-foreground">직전 기수 블로그 후기 작성 <span className="text-muted-foreground font-normal">(5천원 할인)</span></p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <span className="text-purple-600 flex-shrink-0 mt-0.5">4.</span>
+                    <div>
+                      <p className="font-semibold text-foreground">직전 기수 어워즈 수상자 <span className="text-muted-foreground font-normal">(5천원 할인)</span></p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <span className="text-purple-600 flex-shrink-0 mt-0.5">5.</span>
+                    <div>
+                      <p className="font-semibold text-foreground">블로그 모집 포스팅 공유 <span className="text-muted-foreground font-normal">(5천원 할인)</span></p>
                     </div>
                   </div>
                 </div>
@@ -115,12 +140,8 @@ const ApplicationForm = () => {
                 <h5 className="text-xl font-bold text-center mb-4 text-red-700 dark:text-red-400">선착순 모집 마감 예정!</h5>
                 <div className="space-y-3 text-center">
                   <div>
-                    <p className="font-semibold text-red-700 dark:text-red-400">기존 챌린저 할인 신청 마감</p>
-                    <p className="text-red-600 dark:text-red-500">~11/29(토)</p>
-                  </div>
-                  <div>
                     <p className="font-semibold text-red-700 dark:text-red-400">신청 마감일</p>
-                    <p className="text-red-600 dark:text-red-500">~11/30(일)</p>
+                    <p className="text-red-600 dark:text-red-500 text-xl font-bold">~12/2(화) 오전까지</p>
                   </div>
                 </div>
               </div>

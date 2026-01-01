@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Users, Calendar, TrendingUp, Heart, Trophy } from "lucide-react";
+import { Target, Users, Calendar, Heart } from "lucide-react";
 
 const About = () => {
   const features = [
@@ -31,11 +31,11 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h3 className="text-4xl font-bold text-foreground mb-4">
-            Ritual Club이란?
+            롤라움 리추얼챌린지란?
           </h3>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             2022년부터 시작된 체계적인 3주 챌린지를 통해 건강한 습관을 형성하고, 
-            함께하는 챌린저들과 성장하는 커뮤니티입니다.
+            함께하는 챌린저들과 성장하는 리추얼클럽 커뮤니티입니다.
           </p>
         </div>
 
@@ -72,38 +72,38 @@ const About = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">누적 참가자:</strong> 400명 이상의 멤버들이 함께했습니다
+                    <strong className="text-foreground">누적 참가자:</strong> 120명 이상의 멤버들이 함께했습니다
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">리추얼 마스터:</strong> 10회 이상 참여한 베테랑 멤버 9명
+                    <strong className="text-foreground">누적 챌린지 참여:</strong> 512회 이상의 챌린지 참여 기록
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">
-                    <strong className="text-foreground">최고 기록:</strong> 최대 49회 참여한 멤버까지!
+                    <strong className="text-foreground">다양한 챌린지:</strong> 8가지 챌린지로 다양한 습관 형성 지원
                   </p>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-green-50 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">400+</div>
+              <div className="bg-primary/10 rounded-xl p-6 text-center">
+                <div className="text-3xl font-bold text-primary mb-2">120+</div>
                 <p className="text-muted-foreground">누적 참가자</p>
               </div>
-              <div className="bg-green-50 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">80%+</div>
-                <p className="text-muted-foreground">재참여율</p>
+              <div className="bg-primary/10 rounded-xl p-6 text-center">
+                <div className="text-3xl font-bold text-primary mb-2">512+</div>
+                <p className="text-muted-foreground">누적 챌린지 참여</p>
               </div>
-              <div className="bg-green-50 rounded-xl p-6 text-center">
+              <div className="bg-primary/10 rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-primary mb-2">3주</div>
                 <p className="text-muted-foreground">체계적 프로그램</p>
               </div>
-              <div className="bg-green-50 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">7종</div>
+              <div className="bg-primary/10 rounded-xl p-6 text-center">
+                <div className="text-3xl font-bold text-primary mb-2">8종</div>
                 <p className="text-muted-foreground">다양한 챌린지</p>
               </div>
             </div>
